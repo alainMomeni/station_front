@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Sidebar from "./Sidebar";
-import Header from "./Header";
-import MainContent from "./MainContent";
+import Header from "../Header";
+import MainContent from "./MainContent/MainContent";
 
 const Dashboard: FC = () => {
   return (
