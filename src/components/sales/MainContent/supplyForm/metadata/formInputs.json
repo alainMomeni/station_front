@@ -1,0 +1,28 @@
+{
+    "formInputs": [
+      {
+        "label": "Commande N",
+        "type": "text"
+      },
+      {
+        "label": "Bon de Livraison",
+        "type": "text"
+      },
+      {
+        "label": "Quantité livrée",
+        "type": "number"
+      },
+      {
+        "label": "Unité de mesure",
+        "type": "text"
+      },
+      {
+        "label": "Capacité récipient",
+        "type": "number"
+      },
+      {
+        "label": "Valorisation",
+        "type": "text"
+      }
+    ]
+  }

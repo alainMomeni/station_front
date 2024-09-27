@@ -1,11 +1,7 @@
 import { FC, useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { SidebarItemProps } from "../../types/sales/sidebar/sidebarItemProps";
 
-interface SidebarItemProps {
-  icon: JSX.Element;
-  title: string;
-  children?: JSX.Element | JSX.Element[];
-}
 
 const SidebarItem: FC<SidebarItemProps> = ({ icon, title, children }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

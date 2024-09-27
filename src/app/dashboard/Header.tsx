@@ -1,19 +1,36 @@
-import { FC } from "react";
-import { ChevronDown } from "lucide-react";
+import { FC, useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react"; // Importation des icônes
+import NotificationsModal from "../../components/header/modal/NotificationsModal";
+import AccountMenuModal from "../../components/header/modal/AccountMenuModal";   // Importation du modal de compte
 
 const Header: FC = () => {
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false); // Pour le modal de notifications
+  const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);   // Pour le menu de compte
+
+  const toggleNotifications = () => {
+    setIsNotificationOpen(!isNotificationOpen);
+  };
+
+  const toggleAccountMenu = () => {
+    setIsAccountMenuOpen(!isAccountMenuOpen);
+  };
+
   return (
-    <header className="flex justify-between items-center mb-8">
+    <header className="flex justify-between items-center mb-8 relative">
       <div className="flex items-center space-x-4"></div>
       <div className="flex items-center space-x-4 relative">
-        {/* Icone avec la badge de notification */}
-        <div className="relative">
+        
+        {/* Icône de notification avec badge */}
+        <div
+          className="relative cursor-pointer group"
+          onClick={toggleNotifications}
+        >
           <img
             src="/src/assets/svg/ring.svg"
             alt="Notifications"
             width="24"
             height="24"
-            className="mr-3"
+            className="mr-3 group-hover:text-indigo-600 group-hover:scale-110 transition-transform duration-300 ease-in-out"
           />
           {/* Badge de notification */}
           <div className="absolute bottom-0 right-0 bg-indigo-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
@@ -21,7 +38,10 @@ const Header: FC = () => {
           </div>
         </div>
 
-        {/* Utilisateur */}
+        {/* Modal des notifications */}
+        {isNotificationOpen && <NotificationsModal />}
+
+        {/* Icône utilisateur */}
         <div className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold">
           F
         </div>
@@ -29,10 +49,22 @@ const Header: FC = () => {
           <p className="font-semibold">Franc</p>
           <p className="text-sm text-gray-500">System Admin</p>
         </div>
-        <ChevronDown />
+
+        {/* Changement de l'icône en fonction de l'état du menu */}
+        <div onClick={toggleAccountMenu} className="cursor-pointer">
+          {isAccountMenuOpen ? (
+            <ChevronUp className="text-gray-500 h-4" />
+          ) : (
+            <ChevronDown className="text-gray-500" />
+          )}
+        </div>
+
+        {/* Menu de compte */}
+        {isAccountMenuOpen && <AccountMenuModal />}
       </div>
     </header>
   );
 };
 
 export default Header;
+

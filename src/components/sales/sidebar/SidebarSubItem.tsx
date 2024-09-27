@@ -1,10 +1,5 @@
 import { FC } from "react";
-
-interface SidebarSubItemProps {
-  title: string;
-  active?: boolean;
-  highlighted?: boolean;
-}
+import { SidebarSubItemProps } from "../../types/sales/sidebar/sidebarSubItemProps";
 
 const SidebarSubItem: FC<SidebarSubItemProps> = ({ title, active, highlighted }) => (
   <div

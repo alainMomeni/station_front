@@ -1,0 +1,52 @@
+{
+    "sidebarItems": [
+      {
+        "icon": "/src/assets/svg/vente.svg",
+        "title": "Ventes",
+        "subItems": [
+          { "title": "Produits", "highlighted": true },
+          { "title": "Ventes", "highlighted": true }
+        ]
+      },
+      {
+        "icon": "/src/assets/svg/supply.svg",
+        "title": "Approvisionnement",
+        "subItems": [
+          { "title": "Bons de Commande", "highlighted": true },
+          { "title": "Approvisionnement", "active": true }
+        ]
+      },
+      {
+        "icon": "/src/assets/svg/stock.svg",
+        "title": "Stocks",
+        "subItems": [
+          { "title": "Stock Produits blancs", "highlighted": true },
+          { "title": "Stock produits boutique", "highlighted": true }
+        ]
+      },
+      {
+        "icon": "/src/assets/svg/clientele.svg",
+        "title": "Clientèle",
+        "subItems": [
+          { "title": "Comptes", "highlighted": true },
+          { "title": "Clients", "highlighted": true }
+        ]
+      },
+      {
+        "icon": "/src/assets/images/activite.png",
+        "title": "Suivi de l'activité",
+        "subItems": [
+          { "title": "Inventaires", "highlighted": true },
+          { "title": "Control Stock Fuel", "highlighted": true }
+        ]
+      },
+      {
+        "icon": "/src/assets/images/achats.png",
+        "title": "Achats/Dépenses",
+        "subItems": [
+          { "title": "Commandes", "highlighted": true },
+          { "title": "Dépenses", "highlighted": true }
+        ]
+      }
+    ]
+  }
