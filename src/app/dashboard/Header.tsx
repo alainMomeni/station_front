@@ -1,11 +1,12 @@
 import { FC, useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react"; // Importation des icônes
 import NotificationsModal from "../../components/header/modal/NotificationsModal";
-import AccountMenuModal from "../../components/header/modal/AccountMenuModal";   // Importation du modal de compte
+import AccountMenuModal from "../../components/header/modal/AccountMenuModal"; // Importation du modal de compte
 
-const Header: FC = () => {
+// Ajout de toggleSidebar en tant que prop
+const Header: FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false); // Pour le modal de notifications
-  const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);   // Pour le menu de compte
+  const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false); // Pour le menu de compte
 
   const toggleNotifications = () => {
     setIsNotificationOpen(!isNotificationOpen);
@@ -17,14 +18,29 @@ const Header: FC = () => {
 
   return (
     <header className="flex justify-between items-center mb-8 relative">
-      <div className="flex items-center space-x-4"></div>
+      {/* Bouton pour ouvrir/fermer la Sidebar sur mobile */}
+      <div className="flex items-center space-x-4">
+        <button className="md:hidden  focus:outline-none" onClick={toggleSidebar}>
+          <svg
+            className="w-12 h-12 text-customIndigoFade"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
       <div className="flex items-center space-x-4 relative">
-        
         {/* Icône de notification avec badge */}
-        <div
-          className="relative cursor-pointer group"
-          onClick={toggleNotifications}
-        >
+        <div className="relative cursor-pointer group" onClick={toggleNotifications}>
           <img
             src="/src/assets/svg/ring.svg"
             alt="Notifications"
@@ -52,11 +68,7 @@ const Header: FC = () => {
 
         {/* Changement de l'icône en fonction de l'état du menu */}
         <div onClick={toggleAccountMenu} className="cursor-pointer">
-          {isAccountMenuOpen ? (
-            <ChevronUp className="text-gray-500 h-4" />
-          ) : (
-            <ChevronDown className="text-gray-500" />
-          )}
+          {isAccountMenuOpen ? <ChevronUp className="text-gray-500 h-4" /> : <ChevronDown className="text-gray-500" />}
         </div>
 
         {/* Menu de compte */}
@@ -67,4 +79,6 @@ const Header: FC = () => {
 };
 
 export default Header;
+
+
 

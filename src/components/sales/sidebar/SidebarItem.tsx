@@ -2,7 +2,6 @@ import { FC, useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { SidebarItemProps } from "../../types/sales/sidebar/sidebarItemProps";
 
-
 const SidebarItem: FC<SidebarItemProps> = ({ icon, title, children }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -13,7 +12,7 @@ const SidebarItem: FC<SidebarItemProps> = ({ icon, title, children }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         {icon}
-        <span className="ml-2 text-customIndigoFade">{title}</span>
+        <span className="ml-2 text-xs md:text-base text-customIndigoFade">{title}</span>
         {isOpen ? (
           <ChevronUp className="ml-auto text-customIndigoFade h-4" />
         ) : (
@@ -26,3 +25,5 @@ const SidebarItem: FC<SidebarItemProps> = ({ icon, title, children }) => {
 };
 
 export default SidebarItem;
+
+
