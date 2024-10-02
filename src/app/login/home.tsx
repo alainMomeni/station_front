@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Form } from "./form";
 
-export const Home: FC = () => {
+export const Login: FC = () => {
   return (
     <div className="bg-gray-100 flex justify-center items-center w-full min-h-screen p-4">
       <div className="bg-white rounded-2xl overflow-hidden max-w-6xl w-full shadow-2xl flex flex-col lg:flex-row">
@@ -59,6 +59,6 @@ export const Home: FC = () => {
   );
 };
 
-export default Home;
+export default Login;
 
 

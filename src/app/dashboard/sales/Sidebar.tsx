@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import SidebarItem from "../../../components/sales/sidebar/SidebarItem";
 import SidebarSubItem from "../../../components/sales/sidebar/SidebarSubItem";
 import MenuItem from "../../../components/sales/sidebar/MenuItem";
@@ -14,11 +14,17 @@ const SidebarIcon: FC<SidebarIconProps> = ({ src, alt }) => (
 
 // Sidebar avec isOpen et toggleSidebar
 const Sidebar: FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isOpen, toggleSidebar }) => {
+  const [openItemIndex, setOpenItemIndex] = useState<number | null>(null);
+
+  const handleItemClick = (index: number) => {
+    setOpenItemIndex(openItemIndex === index ? null : index);
+  };
+
   return (
     <div>
       {/* Sidebar */}
       <aside
-        className={`bg-white shadow-md fixed inset-y-0 left-0 w-64 h-screen overflow-y-auto transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`bg-white shadow-md fixed inset-y-0 left-0 w-72 h-screen overflow-y-auto transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:relative md:translate-x-0 md:block md:w-80 z-50`}
       >
@@ -51,12 +57,14 @@ const Sidebar: FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isOpen, t
               key={index}
               icon={<SidebarIcon src={item.icon} alt={item.title} />}
               title={item.title}
+              isOpen={openItemIndex === index}
+              onClick={() => handleItemClick(index)}
             >
               {item.subItems.map((subItem, subIndex) => (
                 <SidebarSubItem
                   key={subIndex}
                   title={subItem.title}
-                  active={subItem.active}
+                  to={subItem.to}
                   highlighted={subItem.highlighted}
                 />
               ))}

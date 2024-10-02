@@ -68,7 +68,7 @@ const Header: FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
 
         {/* Changement de l'icône en fonction de l'état du menu */}
         <div onClick={toggleAccountMenu} className="cursor-pointer">
-          {isAccountMenuOpen ? <ChevronUp className="text-gray-500 h-4" /> : <ChevronDown className="text-gray-500" />}
+          {isAccountMenuOpen ? <ChevronUp className="text-gray-500 h-4" /> : <ChevronDown className="text-gray-500 h-4" />}
         </div>
 
         {/* Menu de compte */}

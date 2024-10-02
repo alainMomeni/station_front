@@ -1,9 +1,9 @@
 import { FC } from "react";
-import InputField from "../../../../components/sales/MainContent/supplyForm/InputField";
-import formInputs from "../../../../components/sales/MainContent/supplyForm/metadata/formInputs.json";
-import buttons from "../../../../components/sales/MainContent/supplyForm/metadata/buttons.json";
+import InputField from "../../../../../../components/sales/MainContent/supplyForm/InputField";
+import formInputs from "../../../../../../components/sales/MainContent/supplyForm/metadata/formInputs.json";
+import buttons from "../../../../../../components/sales/MainContent/supplyForm/metadata/buttons.json";
 
-const MainContent: FC = () => (
+const SupplyForm: FC = () => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Buttons */}
     <div className="bg-white rounded-xl shadow-md p-2 mb-6 overflow-x-auto">
@@ -61,4 +61,4 @@ const MainContent: FC = () => (
   </div>
 );
 
-export default MainContent;
+export default SupplyForm;

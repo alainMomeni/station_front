@@ -1,9 +1,9 @@
 import { FC, useState } from "react";
-import Sidebar from "./Sidebar";
-import Header from "../Header";
-import MainContent from "./MainContent/MainContent";
+import Sidebar from "../../../Sidebar";
+import Header from "../../../../Header";
+import SupplyTable from "./table";
 
-const Dashboard: FC = () => {
+const DashboardTableSupply: FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // État pour la Sidebar
 
   // Fonction pour ouvrir/fermer la Sidebar
@@ -12,18 +12,17 @@ const Dashboard: FC = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen overflow-hidden bg-gray-100">
       {/* Passer l'état et la fonction de toggle à la Sidebar */}
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-      <main className="flex-1 p-8">
+
+      <main className="flex-1 p-8 overflow-y-auto">
         {/* Passer la fonction de toggle au Header */}
         <Header toggleSidebar={toggleSidebar} />
-        <MainContent />
+        <SupplyTable />
       </main>
     </div>
   );
 };
 
-export default Dashboard;
-
-
+export default DashboardTableSupply;

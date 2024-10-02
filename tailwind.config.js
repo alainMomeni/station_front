@@ -10,6 +10,7 @@ export default {
         customIndigoFade: '#9197B3',
         customIndigoHover: '#5932EA',
         customVColor: '#838383',
+        customTableText: '#B5B7C0'
       },
     },
   },

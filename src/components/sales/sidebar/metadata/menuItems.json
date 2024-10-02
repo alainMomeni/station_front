@@ -6,16 +6,16 @@
       "alt": "sales",
       "width": 26,
       "height": 26,
-      "className": "border p-1 bg-customIndigoHover rounded-lg cursor-pointer"
+      "className": "border p-2 bg-customIndigoHover rounded-lg cursor-pointer"
     },
     {
       "type": "image",
-      "src": "/src/assets/svg/chart.svg",
+      "src": "/src/assets/images/Chart.png",
       "hoverSrc": "/src/assets/images/chart_white.png",
       "alt": "chart",
       "width": 26,
       "height": 26,
-      "className": "hover:border p-1 hover:bg-customIndigoHover rounded-lg cursor-pointer"
+      "className": "hover:border p-2 hover:bg-customIndigoHover rounded-lg cursor-pointer"
     },
     {
       "type": "image",
@@ -24,7 +24,7 @@
       "alt": "setting",
       "width": 26,
       "height": 26,
-      "className": "hover:border p-1 hover:bg-customIndigoHover rounded-lg cursor-pointer"
+      "className": "hover:border p-2 hover:bg-customIndigoHover rounded-lg cursor-pointer"
     }
   ]
 }

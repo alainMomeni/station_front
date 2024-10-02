@@ -18,7 +18,22 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@public/*": ["public/*"],
+      "@middleware": ["src/middleware.ts"],
+      "@foundry/*": ["src/foundry/*"],
+      "@app/*": ["src/app/*"],
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"],
+      "@static/*": ["src/static/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@states/*": ["src/states/*"],
+      "@lib/*": ["src/lib/*"]
+    }
   },
   "include": ["src"]
 }

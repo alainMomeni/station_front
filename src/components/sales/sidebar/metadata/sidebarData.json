@@ -4,48 +4,48 @@
       "icon": "/src/assets/svg/vente.svg",
       "title": "Ventes",
       "subItems": [
-        { "title": "Produits", "highlighted": true },
-        { "title": "Ventes", "highlighted": true }
+        { "title": "Produits", "to": "/ventes/produits", "highlighted": true },
+        { "title": "Ventes", "to": "/ventes", "highlighted": true }
       ]
     },
     {
       "icon": "/src/assets/svg/supply.svg",
       "title": "Approvisionnement",
       "subItems": [
-        { "title": "Bons de Commande", "highlighted": true },
-        { "title": "Approvisionnement", "active": true }
+        { "title": "Bons de Commande", "to": "/approvisionnement/bons-de-commande", "highlighted": true },
+        { "title": "Approvisionnement", "to": "/approvisionnement", "highlighted": true }
       ]
     },
     {
       "icon": "/src/assets/svg/stock.svg",
       "title": "Stocks",
       "subItems": [
-        { "title": "Stock Produits Blancs", "highlighted": true },
-        { "title": "Stock Produits Boutique", "highlighted": true }
+        { "title": "Stock Produits Blancs", "to": "/stocks/produits-blancs", "highlighted": true },
+        { "title": "Stock Produits Boutique", "to": "/stocks/produits-boutique", "highlighted": true }
       ]
     },
     {
       "icon": "/src/assets/svg/clientele.svg",
       "title": "Clientèle",
       "subItems": [
-        { "title": "Comptes", "highlighted": true },
-        { "title": "Clients", "highlighted": true }
+        { "title": "Comptes", "to": "/clientele/comptes", "highlighted": true },
+        { "title": "Clients", "to": "/clientele/clients", "highlighted": true }
       ]
     },
     {
       "icon": "/src/assets/images/activite.png",
       "title": "Suivi de l'Activité",
       "subItems": [
-        { "title": "Inventaires", "highlighted": true },
-        { "title": "Control Stock Fuel", "highlighted": true }
+        { "title": "Inventaires", "to": "/suivi-activite/inventaires", "highlighted": true },
+        { "title": "Control Stock Fuel", "to": "/suivi-activite/control-stock-fuel", "highlighted": true }
       ]
     },
     {
       "icon": "/src/assets/images/achats.png",
       "title": "Achats / Dépenses",
       "subItems": [
-        { "title": "Commandes", "highlighted": true },
-        { "title": "Dépenses", "highlighted": true }
+        { "title": "Commandes", "to": "/achats-depenses/commandes", "highlighted": true },
+        { "title": "Dépenses", "to": "/achats-depenses/depenses", "highlighted": true }
       ]
     }
   ]
