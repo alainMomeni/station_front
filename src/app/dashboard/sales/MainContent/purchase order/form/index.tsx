@@ -1,9 +1,9 @@
 import { FC, useState } from "react";
 import Sidebar from "../../../Sidebar";
 import Header from "../../../../Header";
-import SupplyTable from "./table";
+import PurchaseOrderForm from "./form";
 
-const DashboardTableSupply: FC = () => {
+const IndexFormPurchaseOrder: FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // État pour la Sidebar
 
   // Fonction pour ouvrir/fermer la Sidebar
@@ -19,10 +19,10 @@ const DashboardTableSupply: FC = () => {
       <main className="flex-1 p-8 overflow-y-auto">
         {/* Passer la fonction de toggle au Header */}
         <Header toggleSidebar={toggleSidebar} />
-        <SupplyTable />
+        <PurchaseOrderForm />
       </main>
     </div>
   );
 };
 
-export default DashboardTableSupply;
+export default IndexFormPurchaseOrder;

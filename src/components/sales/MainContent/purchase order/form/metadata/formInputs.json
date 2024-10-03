@@ -1,0 +1,8 @@
+{
+    "formInputs": [
+      {
+        "label": "Reference",
+        "type": "text"
+      }
+    ]
+  }

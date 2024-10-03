@@ -1,9 +1,9 @@
 import { FC } from "react";
 import InputField from "../../../../../../components/sales/MainContent/supply/form/InputField";
-import formInputs from "../../../../../../components/sales/MainContent/supply/form/metadata/formInputs.json";
+import formInputs from "../../../../../../components/sales/MainContent/purchase order/form/metadata/formInputs.json";
 import buttons from "../../../../../../components/sales/MainContent/supply/form/metadata/buttons.json";
 
-const SupplyForm: FC = () => (
+const PurchaseOrderForm: FC = () => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Buttons */}
     <div className="bg-white rounded-xl shadow-md p-2 mb-6 overflow-x-auto">
@@ -44,7 +44,7 @@ const SupplyForm: FC = () => (
 
     {/* Form */}
     <div className="bg-white rounded-3xl shadow-md p-4 sm:p-6">
-      <h2 className="text-xl font-semibold mb-6">Nouvel approvisionnement</h2>
+      <h2 className="text-xl font-semibold mb-6"> Nouveau bon de commande </h2>
       <form className="space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {formInputs.formInputs.map((input, index) => (
@@ -61,4 +61,4 @@ const SupplyForm: FC = () => (
   </div>
 );
 
-export default SupplyForm;
+export default PurchaseOrderForm;

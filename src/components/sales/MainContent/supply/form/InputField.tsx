@@ -5,6 +5,7 @@ interface InputFieldProps {
   type?: string;
 }
 
+
 const InputField: FC<InputFieldProps> = ({ label, type = "text" }) => (
   <div className="w-full">
     <label className="block text-sm font-medium text-gray-700 mb-1">
