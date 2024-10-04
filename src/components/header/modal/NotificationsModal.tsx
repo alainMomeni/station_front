@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const NotificationsModal: FC = () => {
   return (
-    <div className="absolute top-12 right-0 w-80 bg-white shadow-lg rounded-lg">
+    <div className="absolute top-12 right-0 w-80 z-20 bg-white shadow-lg rounded-lg">
       <div>
         <ul className="space-y-0">
           {/* Notification 1 */}

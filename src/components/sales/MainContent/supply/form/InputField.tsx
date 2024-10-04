@@ -1,9 +1,5 @@
 import { FC } from "react";
-
-interface InputFieldProps {
-  label: string;
-  type?: string;
-}
+import { InputFieldProps } from "@/components/types/sales/supply/supplyForm/InputFieldProps";
 
 
 const InputField: FC<InputFieldProps> = ({ label, type = "text" }) => (
