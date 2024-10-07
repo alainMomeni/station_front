@@ -1,9 +1,8 @@
 // components/sales/MainContent/supply/table/SupplyButtons.tsx
-import { FC } from "react";
 import buttons from "@/components/sales/MainContent/purchase order/form/metadata/buttons.json";
 import { PathAttributes } from "@/components/types/sales/supply/PathAttributes";
 
-const PurchaseOrderFormButtons: FC = () => (
+const PurchaseOrderFormButtons: React.FC = () => (
     <div className="bg-white rounded-xl shadow-md p-2 mb-6 overflow-x-auto">
     <div className="flex space-x-4 min-w-max flex-wrap">
       {buttons.buttons.map((button, index) => (

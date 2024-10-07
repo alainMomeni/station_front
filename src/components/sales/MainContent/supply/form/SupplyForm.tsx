@@ -1,9 +1,8 @@
-import { FC } from "react";
 import InputField from "@components/sales/MainContent/supply/form/InputField";
 import formInputs from "@components/sales/MainContent/supply/form/metadata/formInputs.json";
 import SupplyFormButtons from "@/components/sales/MainContent/supply/form/SupplyFormButtons";
 
-const SupplyForm: FC = () => (
+const SupplyForm: React.FC = () => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Buttons */}
     <SupplyFormButtons />

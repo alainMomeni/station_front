@@ -1,7 +1,7 @@
-import { useState, FC } from "react";
+import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 
-export const Form: FC = () => {
+export const Form: React.FC = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   return (

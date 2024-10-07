@@ -1,7 +1,7 @@
 // components/sales/MainContent/supply/table/SupplyFooter.tsx
 import { FC } from "react";
 
-const Footer: FC = () => (
+const Footer: React.FC = () => (
   <div className="bg-white rounded-xl shadow-md p-4 mt-6 text-center text-sm sm:text-base">
     Copyright © 2024 Neema. Tous droits réservés
   </div>

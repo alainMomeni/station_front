@@ -2,6 +2,7 @@
   "buttons": [
     {
       "text": "Ajouter",
+      "to": "/approvisionnement/form",
       "icon": {
         "id": "add-button",
         "paths": [

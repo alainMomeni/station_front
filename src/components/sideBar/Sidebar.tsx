@@ -1,19 +1,22 @@
-import { FC, useState } from "react";
-import SidebarItem from "../../../components/sales/sidebar/SidebarItem";
-import SidebarSubItem from "../../../components/sales/sidebar/SidebarSubItem";
-import MenuItem from "../../../components/sales/sidebar/MenuItem";
-import sidebarData from "../../../components/sales/sidebar/metadata/sidebarData.json";
-import menuItemsData from "../../../components/sales/sidebar/metadata/menuItems.json";
-import { MenuItemType } from "../../../components/types/sales/sidebar/menuItemType";
-import { SidebarIconProps } from "../../../components/types/sales/sidebar/sidebarIconProps";
+import { useState } from "react";
+import SidebarItem from "@/components/sales/sidebar/SidebarItem";
+import SidebarSubItem from "@/components/sales/sidebar/SidebarSubItem";
+import MenuItem from "@/components/sales/sidebar/MenuItem";
+import sidebarData from "@/components/sales/sidebar/metadata/sidebarData.json";
+import menuItemsData from "@/components/sales/sidebar/metadata/menuItems.json";
+import { MenuItemType } from "@/components/types/sales/sidebar/menuItemType";
+import { SidebarIconProps } from "@components/types/sales/sidebar/sidebarIconProps";
 
 // Sidebar Icon Component
-const SidebarIcon: FC<SidebarIconProps> = ({ src, alt }) => (
+const SidebarIcon: React.FC<SidebarIconProps> = ({ src, alt }) => (
   <img src={src} alt={alt} className="w-6 h-6 mr-4" />
 );
 
 // Sidebar avec isOpen et toggleSidebar
-const Sidebar: FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isOpen, toggleSidebar }) => {
+const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({
+  isOpen,
+  toggleSidebar,
+}) => {
   const [openItemIndex, setOpenItemIndex] = useState<number | null>(null);
 
   const handleItemClick = (index: number) => {
@@ -39,7 +42,9 @@ const Sidebar: FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isOpen, t
               className="mr-3"
             />
             Station OLA
-            <span className="text-xs md:text-sm text-customVColor ml-2 mt-4">v.01</span>
+            <span className="text-xs md:text-sm text-customVColor ml-2 mt-4">
+              v.01
+            </span>
           </h1>
         </div>
 
@@ -65,7 +70,6 @@ const Sidebar: FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isOpen, t
                   key={subIndex}
                   title={subItem.title}
                   to={subItem.to}
-                  highlighted={subItem.highlighted}
                 />
               ))}
             </SidebarItem>
@@ -85,7 +89,3 @@ const Sidebar: FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isOpen, t
 };
 
 export default Sidebar;
-
-
-
-

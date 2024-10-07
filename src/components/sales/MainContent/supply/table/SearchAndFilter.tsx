@@ -1,11 +1,11 @@
 // components/sales/MainContent/supply/table/SearchAndFilter.tsx
-import { FC, useState } from "react";
+import { useState } from "react";
 import { ChevronDown, Search } from "lucide-react";
 import { SearchAndFilterProps } from "@/components/types/sales/supply/supplyTable/SearchAndFilterProps";
 
 
 
-const SearchAndFilter: FC<SearchAndFilterProps> = ({ selectedFilter, handleFilterSelect }) => {
+const SearchAndFilter: React.FC<SearchAndFilterProps> = ({ selectedFilter, handleFilterSelect }) => {
   const [isFilterDropdownOpen, setIsFilterDropdownOpen] = useState(false);
 
   const toggleFilterDropdown = () => setIsFilterDropdownOpen(!isFilterDropdownOpen);
@@ -27,7 +27,7 @@ const SearchAndFilter: FC<SearchAndFilterProps> = ({ selectedFilter, handleFilte
         </div>
 
         {isFilterDropdownOpen && (
-          <div className="absolute top-full right-0 mt-1 w-full md:w-48 bg-white rounded-md shadow-lg z-10 border border-gray-200">
+          <div className="absolute top-full right-0 mt-1 w-full bg-white rounded-md shadow-lg z-10 border border-gray-200">
             <div className="py-1">
               <button className={`block w-full text-left px-4 py-2 text-sm ${selectedFilter === "Newest" ? "bg-gray-100 text-gray-900" : "text-gray-700"}`} onClick={() => handleFilterSelect("Newest")}>Newest</button>
               <button className={`block w-full text-left px-4 py-2 text-sm ${selectedFilter === "Oldest" ? "bg-gray-100 text-gray-900" : "text-gray-700"}`} onClick={() => handleFilterSelect("Oldest")}>Oldest</button>

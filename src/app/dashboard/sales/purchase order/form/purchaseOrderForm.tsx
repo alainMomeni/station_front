@@ -1,9 +1,8 @@
-import { FC } from "react";
 import InputField from "@components/sales/MainContent/supply/form/InputField";
 import formInputs from "@components/sales/MainContent/purchase order/form/metadata/formInputs.json";
-import PurchaseOrderFormButtons from "@/components/sales/MainContent/purchase order/form/PurchaseOrderFormButtons";
+import PurchaseOrderFormButtons from "@components/sales/MainContent/purchase order/form/PurchaseOrderFormButtons";
 
-const PurchaseOrderForm: FC = () => (
+const PurchaseOrderForm: React.FC = () => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Buttons */}
     <PurchaseOrderFormButtons />

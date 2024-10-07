@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-const NotificationsModal: FC = () => {
+const NotificationsModal: React.FC = () => {
   return (
     <div className="absolute top-12 right-0 w-80 z-20 bg-white shadow-lg rounded-lg">
       <div>

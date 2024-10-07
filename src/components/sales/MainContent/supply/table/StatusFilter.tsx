@@ -1,10 +1,10 @@
 // components/sales/MainContent/supply/table/StatusFilter.tsx
-import { FC, useState } from "react";
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { StatusFilterProps } from "@/components/types/sales/supply/supplyTable/StatusFilterProps";
 
 
-const StatusFilter: FC<StatusFilterProps> = ({ selectedStatus, handleStatusSelect }) => {
+const StatusFilter: React.FC<StatusFilterProps> = ({ selectedStatus, handleStatusSelect }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);

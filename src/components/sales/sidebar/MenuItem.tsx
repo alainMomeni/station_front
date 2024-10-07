@@ -1,7 +1,7 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { MenuItemType } from "../../../components/types/sales/sidebar/menuItemType";
 
-const MenuItem: FC<{ item: MenuItemType }> = ({ item }) => {
+const MenuItem: React.FC<{ item: MenuItemType }> = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   if (item.type === 'image') {

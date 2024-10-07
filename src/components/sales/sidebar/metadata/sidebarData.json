@@ -4,50 +4,85 @@
       "icon": "/src/assets/svg/vente.svg",
       "title": "Ventes",
       "subItems": [
-        { "title": "Produits", "to": "/ventes/produits", "highlighted": true },
-        { "title": "Ventes", "to": "/ventes", "highlighted": true }
+        {
+          "title": "Produits",
+          "to": "/ventes/produits"
+        },
+        {
+          "title": "Ventes",
+          "to": "/ventes"
+        }
       ]
     },
     {
       "icon": "/src/assets/svg/supply.svg",
       "title": "Approvisionnement",
       "subItems": [
-        { "title": "Bons de Commande", "to": "/approvisionnement/bons-de-commande", "highlighted": true },
-        { "title": "Approvisionnement", "to": "/approvisionnement", "highlighted": true }
+        { 
+          "title": "Bons de Commande", 
+          "to": "/approvisionnement/bons-de-commande"
+        },
+        { 
+          "title": "Approvisionnement", 
+          "to": "/approvisionnement"
+        }
       ]
     },
     {
       "icon": "/src/assets/svg/stock.svg",
       "title": "Stocks",
       "subItems": [
-        { "title": "Stock Produits Blancs", "to": "/stocks/produits-blancs", "highlighted": true },
-        { "title": "Stock Produits Boutique", "to": "/stocks/produits-boutique", "highlighted": true }
+        {
+          "title": "Stock Produits Blancs",
+          "to": "/stocks/produits-blancs"
+        },
+        {
+          "title": "Stock Produits Boutique",
+          "to": "/stocks/produits-boutique"
+        }
       ]
     },
     {
       "icon": "/src/assets/svg/clientele.svg",
       "title": "Clientèle",
       "subItems": [
-        { "title": "Comptes", "to": "/clientele/comptes", "highlighted": true },
-        { "title": "Clients", "to": "/clientele/clients", "highlighted": true }
+        {
+          "title": "Comptes",
+          "to": "/clientele/comptes"
+        },
+        {
+          "title": "Clients",
+          "to": "/clientele/clients"
+        }
       ]
     },
     {
       "icon": "/src/assets/images/activite.png",
       "title": "Suivi de l'Activité",
       "subItems": [
-        { "title": "Inventaires", "to": "/suivi-activite/inventaires", "highlighted": true },
-        { "title": "Control Stock Fuel", "to": "/suivi-activite/control-stock-fuel", "highlighted": true }
+        {
+          "title": "Inventaires",
+          "to": "/suivi-activite/inventaires"
+        },
+        {
+          "title": "Control Stock Fuel",
+          "to": "/suivi-activite/control-stock-fuel"
+        }
       ]
     },
     {
       "icon": "/src/assets/images/achats.png",
       "title": "Achats / Dépenses",
       "subItems": [
-        { "title": "Commandes", "to": "/achats-depenses/commandes", "highlighted": true },
-        { "title": "Dépenses", "to": "/achats-depenses/depenses", "highlighted": true }
+        {
+          "title": "Commandes",
+          "to": "/achats-depenses/commandes"
+        },
+        {
+          "title": "Dépenses",
+          "to": "/achats-depenses/depenses"
+        }
       ]
     }
   ]
 }
-

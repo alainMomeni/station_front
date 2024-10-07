@@ -1,11 +1,11 @@
 // components/sales/MainContent/supply/table/SupplyTable.tsx
-import { FC, useState } from "react";
+import { useState } from "react";
 import StatusFilter from "@/components/sales/MainContent/supply/table/StatusFilter";
 import SearchAndFilter from "@/components/sales/MainContent/supply/table/SearchAndFilter";
 import PaginationSupplyTable from "@/components/sales/MainContent/supply/table/Pagination";
 import SupplyTableButtons from "@/components/sales/MainContent/supply/table/SupplyTableButtons";
 
-const SupplyTable: FC = () => {
+const SupplyTable: React.FC = () => {
   const [selectedStatus, setSelectedStatus] = useState("Approvisionnement actifs");
   const [selectedFilter, setSelectedFilter] = useState("Newest");
 
@@ -55,36 +55,6 @@ const SupplyTable: FC = () => {
                 <td className="py-4 px-4 text-customTableText whitespace-nowrap">250000000</td>
               </tr>
               {/* More rows */}
-              <tr className="border-b">
-                <td className="py-2 md:pr-14 align-middle text-center">
-                  <input type="radio" name="selection" className="rounded-full h-2.5 w-2.5 text-customTableText" />
-                </td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">C-0200001</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">DEOMAX 15L</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">BC-0000001</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">25</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">250000000</td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 md:pr-14 align-middle text-center">
-                  <input type="radio" name="selection" className="rounded-full h-2.5 w-2.5 text-customTableText" />
-                </td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">C-0200001</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">DEOMAX 15L</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">BC-0000001</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">25</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">250000000</td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 md:pr-14 align-middle text-center">
-                  <input type="radio" name="selection" className="rounded-full h-2.5 w-2.5 text-customTableText" />
-                </td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">C-0200001</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">DEOMAX 15L</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">BC-0000001</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">25</td>
-                <td className="py-4 px-4 text-customTableText whitespace-nowrap">250000000</td>
-              </tr>
             </tbody>
           </table>
         </div>

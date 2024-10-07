@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { User, LogOut } from "lucide-react"; // Importation des icônes
 
-const AccountMenuModal: FC = () => {
+const AccountMenuModal: React.FC = () => {
   return (
     <div className="absolute top-16 right-0 w-48 bg-white shadow-lg rounded-lg">
       <ul className="space-y-0">
