@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { User, LogOut } from "lucide-react"; // Importation des icônes
+import { User, LogOut } from "lucide-react";
+import { Link } from "react-router-dom"; // Importation des icônes
 
 const AccountMenuModal: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const AccountMenuModal: React.FC = () => {
         </li>
         <li className="flex items-center cursor-pointer hover:bg-gray-100 rounded-lg px-2 py-3">
           <LogOut className="w-5 h-5 mr-2" />
-          <span>Se déconnecter</span>
+          <span><Link to="/" className="w-5 h-5 mr-2">Se déconnecter</Link></span>
         </li>
       </ul>
     </div>

@@ -1,6 +1,6 @@
-import InputField from "@components/sales/MainContent/supply/form/InputField";
+import InputField from "./InputField";
 import formInputs from "@components/sales/MainContent/supply/form/metadata/formInputs.json";
-import SupplyFormButtons from "@/components/sales/MainContent/supply/form/SupplyFormButtons";
+import SupplyFormButtons from "./supplyFormButtons";
 
 const SupplyForm: React.FC = () => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

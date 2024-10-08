@@ -1,4 +1,4 @@
-import InputField from "@components/sales/MainContent/supply/form/InputField";
+import InputField from "@/components/sales/MainContent/supply/form/InputField";
 import formInputs from "@components/sales/MainContent/purchase order/form/metadata/formInputs.json";
 import PurchaseOrderFormButtons from "@components/sales/MainContent/purchase order/form/PurchaseOrderFormButtons";
 

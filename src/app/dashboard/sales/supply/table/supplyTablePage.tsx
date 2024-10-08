@@ -1,5 +1,5 @@
 
-import SupplyTable from "@components/sales/MainContent/supply/table/table";
+import SupplyTable from "@/components/sales/MainContent/supply/table/supplyTable";
 import Footer from "@/components/footer";
 
 const SupplyTablePage: React.FC = () => {

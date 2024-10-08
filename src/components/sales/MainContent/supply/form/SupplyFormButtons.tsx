@@ -2,7 +2,7 @@ import buttons from "@/components/sales/MainContent/purchase order/form/metadata
 import { PathAttributes } from "@/components/types/sales/supply/PathAttributes";
 import { useNavigate } from "react-router-dom";
 
-const PurchaseOrderFormButtons: React.FC = () => {
+const SupplyFormButtons: React.FC = () => {
   const navigate = useNavigate();
 
   const handleButtonClick = (buttonText: string) => {
@@ -78,4 +78,4 @@ const PurchaseOrderFormButtons: React.FC = () => {
   );
 };
 
-export default PurchaseOrderFormButtons;
+export default SupplyFormButtons;

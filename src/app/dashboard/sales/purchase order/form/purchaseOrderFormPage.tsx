@@ -1,4 +1,4 @@
-import PurchaseOrderForm from "../../../../../app/dashboard/sales/purchase order/form/purchaseOrderForm";
+import PurchaseOrderForm from "@components/sales/MainContent/purchase order/form/purchaseOrderForm";
 
 const PurchaseOrderFormPage: React.FC = () => {
 

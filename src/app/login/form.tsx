@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Form: React.FC = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -47,7 +48,7 @@ export const Form: React.FC = () => {
           type="submit"
           className="w-full py-3 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transition duration-200 transform hover:-translate-y-1"
         >
-          Se connecter
+          <Link to ="/approvisionnement">Se connecter</Link>
         </button>
         <button
           type="button"

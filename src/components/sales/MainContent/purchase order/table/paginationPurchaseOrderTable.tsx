@@ -1,8 +1,7 @@
 // components/sales/MainContent/supply/table/Pagination.tsx
-import { FC } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const PaginationSupplyTable: React.FC = () => (
+const PaginationPurchaseOrderTable: React.FC = () => (
   <div className="flex flex-col sm:flex-row justify-between items-center mt-8">
     <p className="text-sm text-customTableText mb-4 sm:mb-0">Showing data 1 to 8 of 256K entries</p>
     <div className="flex items-center space-x-2 flex-wrap">
@@ -21,4 +20,4 @@ const PaginationSupplyTable: React.FC = () => (
   </div>
 );
 
-export default PaginationSupplyTable;
+export default PaginationPurchaseOrderTable;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react"; // Importation des icônes
-import NotificationsModal from "../modal/NotificationsModal";
-import AccountMenuModal from "../modal/AccountMenuModal"; // Importation du modal de compte
+import NotificationsModal from "./NotificationsModal";
+import AccountMenuModal from "./AccountMenuModal"; // Importation du modal de compte
 import HambergerIcon from "@/assets/svg/hambergerIcon";
 
 // Ajout de toggleSidebar en tant que prop

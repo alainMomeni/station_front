@@ -1,5 +1,4 @@
 // components/sales/sidebar/SidebarItem.tsx
-import { FC } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { SidebarItemProps } from "../../types/sales/sidebar/sidebarItemProps";

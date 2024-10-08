@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import buttons from "@/components/sales/MainContent/supply/table/metadata/buttons.json";
+import buttons from "@/components/sales/MainContent/purchase order/table/metadata/buttons.json";
 import { PathAttributes } from "@/components/types/sales/supply/PathAttributes";
-import DeleteDialog from "./deleteModalSupplyTable";
+import DeleteModalPurchaseOrderTable from "./deleteModalPurchaseOrderTable";
 
-const SupplyTableButtons: React.FC = () => {
+const PurchaseTableButtons: React.FC = () => {
   const navigate = useNavigate();
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
 
   const handleButtonClick = (buttonText: string) => {
     switch (buttonText) {
       case "Ajouter":
-        navigate("/approvisionnement/form");
+        navigate("/approvisionnement/bons-de-commande/form");
         break;
       case "Supprimer":
         setIsDeleteDialogOpen(true);
         break;
         case "Modifier":
-          navigate("/approvisionnement/form");
+          navigate("/approvisionnement/bons-de-commande/form");
           break;
       default:
         break;
@@ -90,7 +90,7 @@ const SupplyTableButtons: React.FC = () => {
         </div>
       </div>
 
-      <DeleteDialog
+      <DeleteModalPurchaseOrderTable
         isOpen={isDeleteDialogOpen}
         onClose={() => setIsDeleteDialogOpen(false)}
         onConfirm={handleDeleteConfirm}
@@ -99,5 +99,4 @@ const SupplyTableButtons: React.FC = () => {
   );
 };
 
-export default SupplyTableButtons;
-
+export default PurchaseTableButtons;

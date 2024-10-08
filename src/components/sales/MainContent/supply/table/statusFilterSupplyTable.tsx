@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 import { StatusFilterProps } from "@/components/types/sales/supply/supplyTable/StatusFilterProps";
 
 
-const StatusFilter: React.FC<StatusFilterProps> = ({ selectedStatus, handleStatusSelect }) => {
+const StatusFilterSupplyTable: React.FC<StatusFilterProps> = ({ selectedStatus, handleStatusSelect }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
@@ -26,4 +26,4 @@ const StatusFilter: React.FC<StatusFilterProps> = ({ selectedStatus, handleStatu
   );
 };
 
-export default StatusFilter;
+export default StatusFilterSupplyTable;

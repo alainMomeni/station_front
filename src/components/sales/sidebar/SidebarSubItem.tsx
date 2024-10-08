@@ -1,12 +1,11 @@
 // components/sales/sidebar/SidebarSubItem.tsx
-import { FC } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { SidebarSubItemProps } from "../../types/sales/sidebar/sidebarSubItemProps";
 
 const SidebarSubItem: React.FC<SidebarSubItemProps> = ({ title, to }) => {
   const location = useLocation();
   const isActive = location.pathname === to || 
-    (to === "/approvisionnement" && location.pathname === "/approvisionnement/form");
+    (to === "/approvisionnement" && location.pathname === "/approvisionnement/form" );
 
   return (
     <NavLink

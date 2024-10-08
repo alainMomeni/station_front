@@ -5,7 +5,7 @@ import { SearchAndFilterProps } from "@/components/types/sales/supply/supplyTabl
 
 
 
-const SearchAndFilter: React.FC<SearchAndFilterProps> = ({ selectedFilter, handleFilterSelect }) => {
+const SearchAndFilterSupplyTable: React.FC<SearchAndFilterProps> = ({ selectedFilter, handleFilterSelect }) => {
   const [isFilterDropdownOpen, setIsFilterDropdownOpen] = useState(false);
 
   const toggleFilterDropdown = () => setIsFilterDropdownOpen(!isFilterDropdownOpen);
@@ -39,4 +39,4 @@ const SearchAndFilter: React.FC<SearchAndFilterProps> = ({ selectedFilter, handl
   );
 };
 
-export default SearchAndFilter;
+export default SearchAndFilterSupplyTable;
