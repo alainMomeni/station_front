@@ -1,13 +1,13 @@
-import PurchaseOrderForm from "@components/sales/MainContent/purchase order/form/purchaseOrderForm";
+// PurchaseOrderFormPage.tsx
+import React from 'react';
+import FormComponent from '@/components/form/formComponent';
+import { formConfigs } from '@/components/form/metadata/form';
 
 const PurchaseOrderFormPage: React.FC = () => {
-
-
   return (
     <div className="flex h-screen overflow-hidden bg-gray-100">
-      {/* Passer l'état et la fonction de toggle à la Sidebar */}
       <main className="flex-1 p-8 overflow-y-auto">
-        <PurchaseOrderForm />
+        <FormComponent config={formConfigs.purchaseOrder} />
       </main>
     </div>
   );
