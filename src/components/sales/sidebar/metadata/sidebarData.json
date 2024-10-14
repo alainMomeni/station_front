@@ -6,7 +6,7 @@
       "subItems": [
         {
           "title": "Produits",
-          "to": "/ventes/produits"
+          "to": "/produits"
         },
         {
           "title": "Ventes",
@@ -34,11 +34,11 @@
       "subItems": [
         {
           "title": "Stock Produits Blancs",
-          "to": "/stocks/produits-blancs"
+          "to": "/stock fuel"
         },
         {
           "title": "Stock Produits Boutique",
-          "to": "/stocks/produits-boutique"
+          "to": "/stock OLA"
         }
       ]
     },

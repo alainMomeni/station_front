@@ -6,9 +6,10 @@ const SidebarSubItem: React.FC<SidebarSubItemProps> = ({ title, to }) => {
   const isActive = 
     location.pathname === to ||
     (to === "/approvisionnement/bons-de-commande" && location.pathname.startsWith("/approvisionnement/bons-de-commande")) ||
-    (to === "/approvisionnement" && 
-     (location.pathname === "/approvisionnement" || location.pathname === "/approvisionnement/form"));
-
+    (to === "/approvisionnement" && (location.pathname === "/approvisionnement" || location.pathname === "/approvisionnement/form")) ||
+    (to === "/ventes" && (location.pathname === "/ventes" || location.pathname === "/ventes/form")) ||
+    (to === "/produits" && (location.pathname === "/produits" || location.pathname === "/produits/form"));
+    
   return (
     <NavLink
       to={to}

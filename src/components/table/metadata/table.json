@@ -59,6 +59,151 @@
           "valuation": "250000000"
         }
       ]
+    },
+    "ventes": {
+      "title": "Ventes",
+      "addRoute": "/ventes/form",
+      "editRoute": "/ventes/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Date de vente", "key": "dateVente" },
+        { "header": "Client", "key": "client" },
+        { "header": "Prix de vente", "key": "prixVente" },
+        { "header": "Quantité vendue", "key": "quantiteVendu" },
+        { "header": "Unité de mesure", "key": "uniteMesure" },
+        { "header": "Quantité totale", "key": "quantiteTotale" },
+        { "header": "Capacité", "key": "capacité" },
+        { "header": "Prix total", "key": "prixTotal" },
+        { "header": "Marge", "key": "marge" },
+        { "header": "Mode de paiement", "key": "modeDePaiement" }
+      ],
+      "buttons": [
+        { "text": "Ajouter" },
+        { "text": "Modifier" },
+        { "text": "Supprimer" }
+      ],
+      "statusOptions": ["Ventes actives", "Ventes inactives"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Ventes actives",
+      "defaultFilter": "Newest",
+      "data": [
+        {
+          "select": false,
+          "dateVente": "2024/08/10 15:30",
+          "client": "Alain",
+          "prixVente": "250000000",
+          "quantiteVendu": "250000000",
+          "uniteMesure": "Litre",
+          "quantiteTotale": "25000000",
+          "capacité": "250000000",
+          "prixTotal": "250000000",
+          "marge": "20",
+          "modeDePaiement": "OM"
+
+        }
+      ]
+    },
+    "produits": {
+      "title": "Produits",
+      "addRoute": "/produits/form",
+      "editRoute": "/produits/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Nom du produit", "key": "nomProduit" },
+        { "header": "Catégorie de produit", "key": "catégorieProduit" },
+        { "header": "Type", "key": "Type" },
+        { "header": "Fiche de prix", "key": "fichePrix" },
+        { "header": "Quantité disponible", "key": "quantitéDisponible" },
+        { "header": "Quantité totale", "key": "quantiteTotale" }
+      ],
+      "buttons": [
+        { "text": "Ajouter" },
+        { "text": "Modifier" },
+        { "text": "Supprimer" }
+      ],
+      "statusOptions": ["Produits actifs", "Produits inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Produits actifs",
+      "defaultFilter": "Newest",
+      "data": [
+        {
+          "select": false,
+          "nomProduit": "Deo Max 15L",
+          "catégorieProduit": "Lubrifiant",
+          "Type": "Produit OLA",
+          "fichePrix": "fp-14-10-2024",
+          "quantitéDisponible": "25",
+          "quantiteTotale": "25000000"
+        }
+      ]
+    },
+    "stockProduitBlanc": {
+      "title": "Stocks produit blanc",
+      "addRoute": "",
+      "editRoute": "",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Produit", "key": "produit" },
+        { "header": "Stock Ouverture", "key": "stockOuverture" },
+        { "header": "Quantité entrée", "key": "quantitéEntree" },
+        { "header": "Quantité sortie", "key": "quantitéSortie" },
+        { "header": "Chiffre d'affaire", "key": "chiffreAffaire" },
+        { "header": "Stock theorique", "key": "stockTheorique" },
+        { "header": "Ecart stock", "key": "ecartStock" }
+      ],
+      "buttons": [
+        { "text": "Desactiver" }
+      ],
+      "statusOptions": ["Stocks actifs", "Stocks inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Stocks actifs",
+      "defaultFilter": "Newest",
+      "data": [
+        {
+          "select": false,
+          "produit": "Deo Max 15L",
+          "stockOuverture": "25",
+          "quantitéEntree": "28",
+          "quantitéSortie": "2",
+          "chiffreAffaire": "2500000",
+          "stockTheorique": "25000000",
+          "ecartStock": "25000000"
+        }
+      ]
+    },
+    "stockProduitOLA": {
+      "title": "Stock produit OLA",
+      "addRoute": "",
+      "editRoute": "",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Produit", "key": "produit" },
+        { "header": "Stock Ouverture", "key": "stockOuverture" },
+        { "header": "Quantité entrée", "key": "quantitéEntree" },
+        { "header": "Quantité sortie", "key": "quantitéSortie" },
+        { "header": "Chiffre d'affaire", "key": "chiffreAffaire" },
+        { "header": "Stock theorique", "key": "stockTheorique" },
+        { "header": "Ecart stock", "key": "ecartStock" }
+      ],
+      "buttons": [
+        { "text": "Desactiver" }
+      ],
+      "statusOptions": ["Stocks actifs", "Stocks inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Stocks actifs",
+      "defaultFilter": "Newest",
+      "data": [
+        {
+          "select": false,
+          "produit": "Deo Max 15L",
+          "stockOuverture": "25",
+          "quantitéEntree": "28",
+          "quantitéSortie": "2",
+          "chiffreAffaire": "2500000",
+          "stockTheorique": "25000000",
+          "ecartStock": "25000000"
+        }
+      ]
     }
   }
 }

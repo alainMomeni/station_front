@@ -1,23 +1,34 @@
-// Types pour la configuration des boutons et des champs de formulaire
 export interface ButtonConfig {
   text: string;
 }
 
-export interface FormInput {
+export interface FormInputBase {
   label: string;
   type: string;
+  readOnly?: boolean;
 }
+
+export interface TextInput extends FormInputBase {
+  type: 'text' | 'number';
+}
+
+export interface SelectInput extends FormInputBase {
+  type: 'select';
+  options: string[];
+}
+
+export type FormInput = TextInput | SelectInput;
 
 export interface FormConfig {
   title: string;
+  cancelRoute: string;
   buttons: ButtonConfig[];
   formInputs: FormInput[];
-  cancelRoute: string;
-  showFooter?: boolean;
+  showFooter: boolean;
+  readOnly?: boolean;
 }
 
-// Props pour le composant InputField
 export interface InputFieldProps {
-  label: string;
-  type?: string;
+  input: FormInput;
+  readOnly?: boolean;
 }
