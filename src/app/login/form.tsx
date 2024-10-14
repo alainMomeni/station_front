@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { useNavigate } from "react-router-dom"; // Importation du hook useNavigate
-
+import googleIcon from '@assets/images/icon-google.png'
 export const Form: React.FC = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const navigate = useNavigate(); // Initialisation du hook useNavigate pour la redirection
@@ -60,7 +60,7 @@ export const Form: React.FC = () => {
           type="button"
           className="w-full py-3 border border-gray-300 rounded-lg shadow-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 transition duration-200 flex items-center justify-center space-x-2"
         >
-          <img src="/src/assets/images/icon-google.png" alt="Google icon" className="w-5 h-5" />
+          <img src={googleIcon} alt="Google icon" className="w-5 h-5" />
           <span>Se connecter avec Google</span>
         </button>
       </div>

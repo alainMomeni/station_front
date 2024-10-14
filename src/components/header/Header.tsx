@@ -36,7 +36,7 @@ const Header: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
           onClick={toggleNotifications}
         >
           <img
-            src="/src/assets/svg/ring.svg"
+            src="src/assets/svg/ring.svg"
             alt="Notifications"
             width="24"
             height="24"
