@@ -1,7 +1,7 @@
-import TableComponent from '@/components/table/tableComponent';
+import React from 'react';
 import tableConfig from '@components/table/metadata/table.json';
+import TableComponent from '@/components/table/tableComponent';
 import Footer from '@/components/footer';
-
 
 const ProductTablePage: React.FC = () => {
   const config = tableConfig.tables.produits;

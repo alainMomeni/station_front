@@ -4,7 +4,7 @@ import TableComponent from '@/components/table/tableComponent';
 import Footer from '@/components/footer';
 
 const PurchaseOrderTablePage: React.FC = () => {
-  const config = tableConfig.tables.bonDeCommande;
+  const config = tableConfig.tables.bondecommande;
 
   return (
     <div className="flex h-screen overflow-hidden bg-gray-100">

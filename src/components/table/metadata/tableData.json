@@ -1,0 +1,71 @@
+{
+    "approvisionnement": [
+      {
+        "select": false,
+        "orderNumber": "C-0200001",
+        "product": "DEOMAX 15L",
+        "deliveryNote": "BC-0000001",
+        "quantityDelivered": "25",
+        "valuation": "250000000"
+      }
+    ],
+    "bondecommande": [
+      {
+        "select": false,
+        "creationDate": "2024/08/10 15:30",
+        "orderNumber": "BC-0200001",
+        "valuation": "250000000"
+      }
+    ],
+    "ventes": [
+      {
+        "select": false,
+        "dateVente": "2024/08/10 15:30",
+        "client": "Alain",
+        "prixVente": "250000000",
+        "quantiteVendu": "250000000",
+        "uniteMesure": "Litre",
+        "quantiteTotale": "25000000",
+        "capacité": "250000000",
+        "prixTotal": "250000000",
+        "marge": "20",
+        "modeDePaiement": "OM"
+      }
+    ],
+    "produits": [
+      {
+        "select": false,
+        "nomProduit": "Deo Max 15L",
+        "catégorieProduit": "Lubrifiant",
+        "Type": "Produit OLA",
+        "fichePrix": "fp-14-10-2024",
+        "quantitéDisponible": "25",
+        "quantiteTotale": "25000000"
+      }
+    ],
+    "stockproduitblanc": [
+      {
+        "select": false,
+        "produit": "Deo Max 15L",
+        "stockOuverture": "25",
+        "quantitéEntree": "28",
+        "quantitéSortie": "2",
+        "chiffreAffaire": "2500000",
+        "stockTheorique": "25000000",
+        "ecartStock": "25000000"
+      }
+    ],
+    "stockproduitola": [
+      {
+        "select": false,
+        "produit": "Deo Max 15L",
+        "stockOuverture": "25",
+        "quantitéEntree": "28",
+        "quantitéSortie": "2",
+        "chiffreAffaire": "2500000",
+        "stockTheorique": "25000000",
+        "ecartStock": "25000000"
+      }
+    ]
+  }
+  

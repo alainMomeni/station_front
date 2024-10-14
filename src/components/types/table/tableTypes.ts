@@ -1,25 +1,13 @@
+import React from 'react';
+
 export interface Column {
   header: string;
   key: string;
 }
 
-export interface IconPath {
-  id: string;
-  d: string;
-  fillRule?: "nonzero" | "evenodd";
-  clipRule?: string;
-  fill?: string;
-  stroke?: string;
-  strokeLinecap?: "round" | "inherit" | "butt" | "square";
-  strokeLinejoin?: "round" | "inherit" | "miter" | "bevel";
-}
-
 export interface Button {
   text: string;
-  icon?: {
-    id: string;
-    paths: IconPath[];
-  };
+  icon?: React.FC<{ className?: string }>;
 }
 
 export interface TableRow {
@@ -28,6 +16,7 @@ export interface TableRow {
 
 export interface TableConfig {
   title: string;
+  dataKey: string;
   addRoute: string;
   editRoute: string;
   columns: Column[];
@@ -36,7 +25,6 @@ export interface TableConfig {
   filterOptions: string[];
   defaultStatus: string;
   defaultFilter: string;
-  data: TableRow[];
 }
 
 export interface TableDataProps {

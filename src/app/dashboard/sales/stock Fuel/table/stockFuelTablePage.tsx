@@ -4,7 +4,7 @@ import TableComponent from '@/components/table/tableComponent';
 import Footer from '@/components/footer';
 
 const StockFuelTablePage: React.FC = () => {
-  const config = tableConfig.tables.stockProduitBlanc;
+  const config = tableConfig.tables.stockproduitblanc;
 
   return (
     <div className="flex h-screen overflow-hidden bg-gray-100">

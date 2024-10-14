@@ -4,7 +4,9 @@ import TableComponent from '@/components/table/tableComponent';
 import Footer from '@/components/footer';
 
 const StockOLATablePage: React.FC = () => {
-  const config = tableConfig.tables.stockProduitOLA;
+  const config = tableConfig.tables.stockproduitola;
+
+  console.log("StockOLATablePage config:", config);
 
   return (
     <div className="flex h-screen overflow-hidden bg-gray-100">

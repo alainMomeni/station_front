@@ -21,5 +21,3 @@ const DeleteIcon: React.FC<IconProps> = ({ className }) => (
 );
 
 export default DeleteIcon;
-
-
