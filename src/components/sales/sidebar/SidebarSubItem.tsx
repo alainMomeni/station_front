@@ -8,7 +8,9 @@ const SidebarSubItem: React.FC<SidebarSubItemProps> = ({ title, to }) => {
     (to === "/approvisionnement/bons-de-commande" && location.pathname.startsWith("/approvisionnement/bons-de-commande")) ||
     (to === "/approvisionnement" && (location.pathname === "/approvisionnement" || location.pathname === "/approvisionnement/form")) ||
     (to === "/ventes" && (location.pathname === "/ventes" || location.pathname === "/ventes/form")) ||
-    (to === "/produits" && (location.pathname === "/produits" || location.pathname === "/produits/form"));
+    (to === "/produits" && (location.pathname === "/produits" || location.pathname === "/produits/form")) || 
+    (to === "/comptes" && (location.pathname === "/comptes" || location.pathname === "/comptes/form")) || 
+    (to === "/clients" && (location.pathname === "/clients" || location.pathname === "/clients/form"));
     
   return (
     <NavLink

@@ -1,6 +1,6 @@
 import { FormConfig } from "@components/types/form/formTypes";
 
-export const formConfigs: Record<'supply' | 'purchaseOrder' | 'vente' | 'produit', FormConfig> = {
+export const formConfigs: Record<'supply' | 'purchaseOrder' | 'vente' | 'produit' | 'compte' | 'client', FormConfig> = {
   supply: {
     title: "Nouvel approvisionnement",
     cancelRoute: "/approvisionnement",
@@ -64,6 +64,41 @@ export const formConfigs: Record<'supply' | 'purchaseOrder' | 'vente' | 'produit
       { label: "Fiche de prix", type: "select", options: ["Fp-14-10-24", "Fp-12-10-24"]  },
       { label: "Quantité disponible", type: "number", readOnly: true },
       { label: "Quantité totale", type: "number", readOnly: true },
+    ],
+    showFooter: true
+  },
+  compte: {
+    title: "Nouveau compte",
+    cancelRoute: "/comptes",
+    buttons: [
+      { text: "Enregistrer" },
+      { text: "Annuler" }
+    ],
+    formInputs: [
+      { label: "Nom du compte", type: "text" },
+      { label: "Télephone", type: "text" },
+      { label: "Email", type: "text" },
+      { label: "Derniere transaction", type: "text" },
+      { label: "Solde courant", type: "text" },
+      { label: "Adresse", type: "text"},
+      { label: "Status", type: "text", readOnly: true }
+    ],
+    showFooter: true
+  },
+  client: {
+    title: "Nouveau client",
+    cancelRoute: "/clients",
+    buttons: [
+      { text: "Enregistrer" },
+      { text: "Annuler" }
+    ],
+    formInputs: [
+      { label: "Nom", type: "text" },
+      { label: "Prénom", type: "text" },
+      { label: "Télephone", type: "text" },
+      { label: "Email", type: "text" },
+      { label: "Comptes", type: "select", options: ["Alain", "Robert"] }
+
     ],
     showFooter: true
   }

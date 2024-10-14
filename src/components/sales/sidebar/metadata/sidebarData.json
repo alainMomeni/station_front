@@ -48,11 +48,11 @@
       "subItems": [
         {
           "title": "Comptes",
-          "to": "/clientele/comptes"
+          "to": "/comptes"
         },
         {
           "title": "Clients",
-          "to": "/clientele/clients"
+          "to": "/clients"
         }
       ]
     },
@@ -62,11 +62,11 @@
       "subItems": [
         {
           "title": "Inventaires",
-          "to": "/suivi-activite/inventaires"
+          "to": "/inventaire"
         },
         {
           "title": "Control Stock Fuel",
-          "to": "/suivi-activite/control-stock-fuel"
+          "to": "/control stock"
         }
       ]
     },
@@ -76,11 +76,11 @@
       "subItems": [
         {
           "title": "Commandes",
-          "to": "/achats-depenses/commandes"
+          "to": "/commandes"
         },
         {
           "title": "Dépenses",
-          "to": "/achats-depenses/depenses"
+          "to": "/depenses"
         }
       ]
     }

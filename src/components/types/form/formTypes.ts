@@ -1,5 +1,5 @@
 export interface ButtonConfig {
-  text: string;
+  text: 'Enregistrer' | 'Annuler';  // Restreindre aux valeurs attendues
 }
 
 export interface FormInputBase {

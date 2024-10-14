@@ -1,4 +1,6 @@
-import React from 'react';
+// src/components/types/table/tableTypes.ts
+
+import { ReactNode } from 'react';
 
 export interface Column {
   header: string;
@@ -7,7 +9,7 @@ export interface Column {
 
 export interface Button {
   text: string;
-  icon?: React.FC<{ className?: string }>;
+  icon: string;
 }
 
 export interface TableRow {
@@ -30,10 +32,12 @@ export interface TableConfig {
 export interface TableDataProps {
   columns: Column[];
   data: TableRow[];
+  onRowSelect: (row: TableRow) => void;
+  selectedRows: TableRow[];
 }
 
 export interface TableButtonsProps {
-  buttons: Button[];
+  buttons: (Button & { icon: ReactNode })[];
   handleButtonClick: (buttonText: string) => void;
 }
 

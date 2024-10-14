@@ -66,6 +66,81 @@
         "stockTheorique": "25000000",
         "ecartStock": "25000000"
       }
+    ],
+    "compte": [
+      {
+        "select": false,
+        "nom": "Alain",
+        "telephone": "657697064",
+        "adresse": "Mendong",
+        "contact": "Robert Lewandovski",
+        "email": "Alain@gmail.com"
+      }
+    ],
+    "client": [
+      {
+        "select": false,
+        "nom": "Geremi",
+        "email": "geremi@gmail.com",
+        "compagnie": "Neema",
+        "telephone": "657697064"
+      }
+    ],
+    "inventaireblanc": [
+      {
+        "select": false,
+        "nom": "Petrol",
+        "quantitestock": "22",
+        "quantitevendu": "25",
+        "depotage": "5",
+        "date": "14-10-2024"
+      }
+    ],
+    "inventaireola": [
+      {
+        "select": false,
+        "produit": "Deo Max 15L",
+        "quantitestock": "22",
+        "quantitevendu": "15",
+        "date": "14-10-2024"
+      }
+    ],
+    "controlstock": [
+      {
+        "select": false,
+        "name": "CS-0001",
+        "pompes": "PO-00001",
+        "indexouverture": "25",
+        "indexfermeture": "30",
+        "differenceindex": "5",
+        "retourencuve": "2",
+        "numero": "N-0001",
+        "densite": "25",
+        "debitpistolet": "25"
+      }
+    ],
+    "commandes": [
+      {
+        "select": false,
+        "bondecommande": "CS-0001",
+        "reference": "PO-00001",
+        "produit": "25",
+        "prixunitaire": "30",
+        "quantitecommande": "5",
+        "quantitelivre": "2",
+        "prixmoderne": "N-0001",
+        "statut": "25"
+      }
+    ],
+    "depenses": [
+      {
+        "select": false,
+        "numero": "CS-0001",
+        "categorie": "PO-00001",
+        "montant": "25",
+        "status": "30",
+        "notes": "5"
+      }
     ]
   }
   

@@ -141,6 +141,172 @@
       "filterOptions": ["Newest", "Oldest"],
       "defaultStatus": "Stocks actifs",
       "defaultFilter": "Newest"
+    },
+    "compte": {
+      "title": "Comptes",
+      "dataKey": "compte",
+      "addRoute": "/comptes/form",
+      "editRoute": "/comptes/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Nom", "key": "nom" },
+        { "header": "Télephone", "key": "telephone" },
+        { "header": "Adresse", "key": "adresse" },
+        { "header": "Contact", "key": "contact" },
+        { "header": "Email", "key": "email" }
+      ],
+      "buttons": [
+        { "text": "Ajouter", "icon": "@/assets/svg/ajouter.tsx" },
+        { "text": "Modifier", "icon": "@/assets/svg/modifier.tsx" },
+        { "text": "Supprimer", "icon": "@/assets/svg/supprimer.tsx" }
+      ],
+      "statusOptions": ["Comptes actifs", "Comptes inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Comptes actifs",
+      "defaultFilter": "Newest"
+    },
+    "client": {
+      "title": "Clients",
+      "dataKey": "client",
+      "addRoute": "/clients/form",
+      "editRoute": "/clients/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Nom", "key": "nom" },
+        { "header": "Email", "key": "email" },
+        { "header": "Nom de la compagnie", "key": "compagnie" },
+        { "header": "Télephone", "key": "telephone" }
+      ],
+      "buttons": [
+        { "text": "Ajouter", "icon": "@/assets/svg/ajouter.tsx" },
+        { "text": "Modifier", "icon": "@/assets/svg/modifier.tsx" },
+        { "text": "Supprimer", "icon": "@/assets/svg/supprimer.tsx" }
+      ],
+      "statusOptions": ["Clients actifs", "Clients inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Clients actifs",
+      "defaultFilter": "Newest"
+    },
+    "inventaireblanc": {
+      "title": "Inventaire produits blancs",
+      "dataKey": "inventaireblanc",
+      "addRoute": "/inventaire produits blancs/form",
+      "editRoute": "/inventaire produits blancs/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Nom", "key": "nom" },
+        { "header": "Quantité en stock", "key": "quantitestock" },
+        { "header": "Quantité vendue", "key": "quantitevendu" },
+        { "header": "Depotage du jour", "key": "depotage" },
+        { "header": "Date", "key": "date" }
+      ],
+      "buttons": [
+        { "text": "Ajouter", "icon": "@/assets/svg/ajouter.tsx" },
+        { "text": "Modifier", "icon": "@/assets/svg/modifier.tsx" },
+        { "text": "Supprimer", "icon": "@/assets/svg/supprimer.tsx" }
+      ],
+      "statusOptions": ["Inventaires actifs", "Inventaires inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Inventaires actifs",
+      "defaultFilter": "Newest"
+    },
+    "inventaireola": {
+      "title": "Inventaire produits boutiques",
+      "dataKey": "inventaireola",
+      "addRoute": "/inventaire produits boutiques/form",
+      "editRoute": "/inventaire produits boutiques/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Produit", "key": "produit" },
+        { "header": "Quantité en stock", "key": "quantitestock" },
+        { "header": "Quantité vendue", "key": "quantitevendu" },
+        { "header": "Date", "key": "date" }
+      ],
+      "buttons": [
+        { "text": "Ajouter", "icon": "@/assets/svg/ajouter.tsx" },
+        { "text": "Modifier", "icon": "@/assets/svg/modifier.tsx" },
+        { "text": "Supprimer", "icon": "@/assets/svg/supprimer.tsx" }
+      ],
+      "statusOptions": ["Inventaires actifs", "Inventaires inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Inventaires actifs",
+      "defaultFilter": "Newest"
+    },
+    "commandes": {
+      "title": "Commandes",
+      "dataKey": "commandes",
+      "addRoute": "/commandes/form",
+      "editRoute": "/commandes/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Bon de commande", "key": "bondecommande" },
+        { "header": "Reference", "key": "reference" },
+        { "header": "Produit", "key": "produit" },
+        { "header": "Prix unitaire", "key": "prixunitaire" },
+        { "header": "Quantité commandé", "key": "quantitecommande" },
+        { "header": "Quantité livré", "key": "quantitelivre" },
+        { "header": "Prix total", "key": "prixmoderne" },
+        { "header": "Statut", "key": "statut" }
+      ],
+      "buttons": [
+        { "text": "Ajouter", "icon": "@/assets/svg/ajouter.tsx" },
+        { "text": "Modifier", "icon": "@/assets/svg/modifier.tsx" },
+        { "text": "Supprimer", "icon": "@/assets/svg/supprimer.tsx" }
+      ],
+      "statusOptions": ["Commandes actives", "Commandes inactives"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Commandes actives",
+      "defaultFilter": "Newest"
+    },
+    "depenses": {
+      "title": "Depenses",
+      "dataKey": "depenses",
+      "addRoute": "/depenses/form",
+      "editRoute": "/depenses/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Numero", "key": "numero" },
+        { "header": "Categorie", "key": "categorie" },
+        { "header": "Montant", "key": "montant" },
+        { "header": "Status", "key": "status" },
+        { "header": "Notes", "key": "notes" }
+      ],
+      "buttons": [
+        { "text": "Ajouter", "icon": "@/assets/svg/ajouter.tsx" },
+        { "text": "Modifier", "icon": "@/assets/svg/modifier.tsx" },
+        { "text": "Supprimer", "icon": "@/assets/svg/supprimer.tsx" }
+      ],
+      "statusOptions": ["Depenses actives", "Depenses inactives"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Depenses actives",
+      "defaultFilter": "Newest"
+    },
+    "controlstock": {
+      "title": "Control stock",
+      "dataKey": "controlstock",
+      "addRoute": "/control stock/form",
+      "editRoute": "/control stock/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Name", "key": "name" },
+        { "header": "Pompes", "key": "pompes" },
+        { "header": "Index ouverture", "key": "indexouverture" },
+        { "header": "Index fermeture", "key": "indexfermeture" },
+        { "header": "Difference index", "key": "differenceindex" },
+        { "header": "Retour en cuve", "key": "retourencuve" },
+        { "header": "Numero", "key": "numero" },
+        { "header": "Densite", "key": "densite" },
+        { "header": "Debit pistolet", "key": "debitpistolet" }
+      ],
+      "buttons": [
+        { "text": "Ajouter", "icon": "@/assets/svg/ajouter.tsx" },
+        { "text": "Modifier", "icon": "@/assets/svg/modifier.tsx" },
+        { "text": "Supprimer", "icon": "@/assets/svg/supprimer.tsx" }
+      ],
+      "statusOptions": ["Control stock actifs", "Control stock inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Control stock actifs",
+      "defaultFilter": "Newest"
     }
   }
 }
