@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MenuItemType } from "../../../components/types/sales/sidebar/menuItemType";
+import { MenuItemType } from "@components/types/sales/sidebar/menuItemType";
 
 const MenuItem: React.FC<{ item: MenuItemType }> = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);

@@ -1,0 +1,66 @@
+{
+  "tables": {
+    "approvisionnement": {
+      "title": "Approvisionnement",
+      "addRoute": "/approvisionnement/form",
+      "editRoute": "/approvisionnement/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "No Commande", "key": "orderNumber" },
+        { "header": "Produit", "key": "product" },
+        { "header": "Bon de livraison", "key": "deliveryNote" },
+        { "header": "Quantité livrée", "key": "quantityDelivered" },
+        { "header": "Valorisation", "key": "valuation" }
+      ],
+      "buttons": [
+        { "text": "Ajouter" },
+        { "text": "Modifier" },
+        { "text": "Supprimer" }
+      ],
+      "statusOptions": ["Approvisionnement actifs", "Approvisionnement inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Approvisionnement actifs",
+      "defaultFilter": "Newest",
+      "data": [
+        {
+          "select": false,
+          "orderNumber": "C-0200001",
+          "product": "DEOMAX 15L",
+          "deliveryNote": "BC-0000001",
+          "quantityDelivered": "25",
+          "valuation": "250000000"
+        }
+      ]
+    },
+    "bonDeCommande": {
+      "title": "Bon de commande",
+      "addRoute": "/approvisionnement/bons-de-commande/form",
+      "editRoute": "/approvisionnement/bons-de-commande/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Date de création", "key": "creationDate" },
+        { "header": "Matricule", "key": "orderNumber" },
+        { "header": "Valorisation", "key": "valuation" }
+      ],
+      "buttons": [
+        { "text": "Ajouter" },
+        { "text": "Modifier" },
+        { "text": "Supprimer" }
+      ],
+      "statusOptions": ["Bon de commande actifs", "Bon de commande inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Bon de commande actifs",
+      "defaultFilter": "Newest",
+      "data": [
+        {
+          "select": false,
+          "creationDate": "2024/08/10 15:30",
+          "orderNumber": "BC-0200001",
+          "valuation": "250000000"
+        }
+      ]
+    }
+  }
+}
+
+  

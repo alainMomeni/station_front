@@ -1,21 +1,9 @@
 // components/sales/sidebar/SidebarItem.tsx
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { useLocation } from "react-router-dom";
-import { SidebarItemProps } from "../../types/sales/sidebar/sidebarItemProps";
+import { SidebarItemProps } from "@components/types/sales/sidebar/sidebarItemProps";
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ icon, title, children, isOpen, onClick }) => {
-  const location = useLocation();
-  const childrenArray = Array.isArray(children) ? children : [children];
-  const isActive = childrenArray.some((child: any) => {
-    const path = location.pathname;
-    const targetPath = child.props.to;
-    
-    if (targetPath === "/approvisionnement") {
-      return path === "/approvisionnement" || path === "/approvisionnement/form";
-    }
-    
-    return path === targetPath;
-  });
+
 
   return (
     <div className="mb-2">

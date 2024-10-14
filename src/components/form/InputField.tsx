@@ -5,7 +5,7 @@ import { InputFieldProps } from '@components/types/form/formTypes';
 const InputField: React.FC<InputFieldProps> = ({ label, type = "text" }) => {
   return (
     <div className="flex flex-col">
-      <label className="block text-sm font-medium text-gray-700 mb-1">
+      <label className="block text-sm font-medium text-gray-700 mb-1 whitespace-nowrap">
         {label}
       </label>
       <input
