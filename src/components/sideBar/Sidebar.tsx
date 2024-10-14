@@ -1,37 +1,60 @@
-import { useState } from "react";
-import SidebarItem from "@/components/sales/sidebar/SidebarItem";
-import SidebarSubItem from "@/components/sales/sidebar/SidebarSubItem";
-import MenuItem from "@/components/sales/sidebar/MenuItem";
-import sidebarData from "@/components/sales/sidebar/metadata/sidebarData.json";
-import menuItemsData from "@/components/sales/sidebar/metadata/menuItems.json";
-import { MenuItemType } from "@/components/types/sales/sidebar/menuItemType";
-import { SidebarIconProps } from "@components/types/sales/sidebar/sidebarIconProps";
+// components/Sidebar.tsx
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { useLocation } from "react-router-dom";
+import MenuItem from "./menuItem";
+import SidebarItem from "./sidebarItem";
+import SidebarSubItem from "./sidebarSubItem";
+import sidebarConfig from "@components/sideBar/metadata/sidebarConfig.json";
+import { SectionType, SidebarConfig } from "@components/types/sidebar/sidebarTypes";
 
-// Sidebar Icon Component
-const SidebarIcon: React.FC<SidebarIconProps> = ({ src, alt }) => (
-  <img src={src} alt={alt} className="w-6 h-6 mr-4" />
-);
+interface SidebarProps {
+  isOpen: boolean;
+  toggleSidebar: () => void;
+}
 
-// Sidebar avec isOpen et toggleSidebar
-const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({
-  isOpen,
-  toggleSidebar,
-}) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
+  const location = useLocation();
+  const [activeSection, setActiveSection] = useState<string>("sales");
   const [openItemIndex, setOpenItemIndex] = useState<number | null>(null);
+  
+  // Mémoriser la config typée
+  const typedConfig = useMemo(() => sidebarConfig as SidebarConfig, []);
+  
+  // Mémoriser la fonction de recherche de section
+  const findActiveSection = useCallback((pathname: string) => {
+    return typedConfig.sections.find((section: SectionType) =>
+      section.sidebarItems.some(item =>
+        item.subItems.some(subItem => pathname.startsWith(subItem.to))
+      )
+    );
+  }, [typedConfig.sections]);
+
+  // Effet avec toutes les dépendances nécessaires
+  useEffect(() => {
+    const section = findActiveSection(location.pathname);
+    if (section) {
+      setActiveSection(section.id);
+    }
+  }, [location.pathname, findActiveSection]);
 
   const handleItemClick = (index: number) => {
     setOpenItemIndex(openItemIndex === index ? null : index);
   };
 
+  // Mémoriser les items actifs
+  const activeItems = useMemo(() => {
+    return typedConfig.sections.find((section: SectionType) => 
+      section.id === activeSection
+    )?.sidebarItems || [];
+  }, [typedConfig.sections, activeSection]);
+
   return (
     <div>
-      {/* Sidebar */}
       <aside
         className={`bg-white shadow-md fixed inset-y-0 left-0 w-72 h-screen overflow-y-auto transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:relative md:translate-x-0 md:block md:w-80 z-50`}
+        } md:relative md:translate-x-0 md:block md:w-80`}
       >
-        {/* Logo */}
         <div className="flex flex-col justify-center items-center p-6">
           <h1 className="text-xl md:text-2xl font-bold flex items-center">
             <img
@@ -48,19 +71,22 @@ const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({
           </h1>
         </div>
 
-        {/* Menu Items */}
         <div className="flex justify-center items-center space-x-3 p-4">
-          {menuItemsData.menuItems.map((item, index) => (
-            <MenuItem key={index} item={item as MenuItemType} />
+          {typedConfig.sections.map((section: SectionType) => (
+            <MenuItem
+              key={section.id}
+              item={section.menuItem}
+              isActive={activeSection === section.id}
+              onClick={() => setActiveSection(section.id)}
+            />
           ))}
         </div>
 
-        {/* Navigation */}
         <nav className="mt-4 px-6">
-          {sidebarData.sidebarItems.map((item, index) => (
+          {activeItems.map((item, index) => (
             <SidebarItem
               key={index}
-              icon={<SidebarIcon src={item.icon} alt={item.title} />}
+              icon={item.icon}
               title={item.title}
               isOpen={openItemIndex === index}
               onClick={() => handleItemClick(index)}
@@ -77,10 +103,9 @@ const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({
         </nav>
       </aside>
 
-      {/* Overlay for closing sidebar on mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-40"
+          className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
           onClick={toggleSidebar}
         ></div>
       )}

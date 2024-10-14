@@ -21,7 +21,8 @@ import AccountTablePage from "../dashboard/sales/account/table/accountTablePage"
 import AccountFormPage from "../dashboard/sales/account/form/accountFormPage";
 import ContactFormPage from "../dashboard/sales/contact/form/contactFormPage";
 import ControlStockTablePage from "../dashboard/sales/controlStock/table/controlStockTablePage";
-import InventoryTablePage from "../dashboard/sales/Inventory/table/inventoryTablePage";
+import FuelInventoryTablePage from "../dashboard/sales/fuelInventory/table/fuelInventoryTablePage";
+import OlaInventoryTablePage from "../dashboard/sales/olaInventory/table/olaInventoryTablePage";
 import ExpenseTablePage from "../dashboard/sales/expense/table/expenseTablePage";
 import CommandTablePage from "../dashboard/sales/commandes/table/commandTablePage";
 
@@ -32,20 +33,21 @@ const appRouters = createBrowserRouter(
       <Route element={<Dashboard />}>
         <Route path="/approvisionnement/form" element={<SupplyFormPage />} />
         <Route path="/approvisionnement" element={<SupplyTablePage />} />
-        <Route path="/approvisionnement/bons-de-commande/form" element={<PurchaseOrderFormPage />} />
-        <Route path="/approvisionnement/bons-de-commande" element={<PurchaseOrderTablePage />} />
+        <Route path="/bons-de-commande/form" element={<PurchaseOrderFormPage />} />
+        <Route path="/bons-de-commande" element={<PurchaseOrderTablePage />} />
         <Route path="/ventes" element={<SaleTablePage />} />
         <Route path="/ventes/form" element={<VenteFormPage />} />
         <Route path="/produits" element={<ProductTablePage />} />
         <Route path="/produits/form" element={<ProductFormPage />} />
-        <Route path="/stock fuel" element={<StockFuelTablePage />} />
-        <Route path="/stock OLA" element={<StockOLATablePage />} />
+        <Route path="/stock-fuel" element={<StockFuelTablePage />} />
+        <Route path="/stock-OLA" element={<StockOLATablePage />} />
         <Route path="/clients" element={<ContactTablePage />} />
         <Route path="/comptes" element={<AccountTablePage />} />
         <Route path="/clients/form" element={<ContactFormPage />} />
         <Route path="/comptes/form" element={<AccountFormPage />} />
-        <Route path="/inventaire" element={<InventoryTablePage />} />
-        <Route path="/control stock" element={<ControlStockTablePage />} />
+        <Route path="/inventaire-fuel" element={<FuelInventoryTablePage />} />
+        <Route path="/inventaire-OLA" element={<OlaInventoryTablePage />} />
+        <Route path="/control-stock" element={<ControlStockTablePage />} />
         <Route path="/depenses" element={<ExpenseTablePage />} />
         <Route path="/commandes" element={<CommandTablePage />} />
       </Route>

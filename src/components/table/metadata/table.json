@@ -26,8 +26,8 @@
     "bondecommande": {
       "title": "Bon de commande",
       "dataKey": "bondecommande",
-      "addRoute": "/approvisionnement/bons-de-commande/form",
-      "editRoute": "/approvisionnement/bons-de-commande/form",
+      "addRoute": "/bons-de-commande/form",
+      "editRoute": "/bons-de-commande/form",
       "columns": [
         { "header": "Selectionner", "key": "select" },
         { "header": "Date de création", "key": "creationDate" },

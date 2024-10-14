@@ -20,7 +20,7 @@ export const formConfigs: Record<'supply' | 'purchaseOrder' | 'vente' | 'produit
   },
   purchaseOrder: {
     title: "Nouveau bon de commande",
-    cancelRoute: "/approvisionnement/bons-de-commande",
+    cancelRoute: "/bons-de-commande",
     buttons: [
       { text: "Enregistrer" },
       { text: "Annuler" }

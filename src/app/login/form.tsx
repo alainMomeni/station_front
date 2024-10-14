@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Importation du hook useNavigate
 
 export const Form: React.FC = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const navigate = useNavigate(); // Initialisation du hook useNavigate pour la redirection
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Empêcher la soumission par défaut du formulaire
+    navigate("/approvisionnement"); // Redirection vers la page d'approvisionnement
+  };
 
   return (
-    <form className="mt-10 space-y-6">
+    <form className="mt-10 space-y-6" onSubmit={handleSubmit}>
       {/* Email Input */}
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -48,7 +54,7 @@ export const Form: React.FC = () => {
           type="submit"
           className="w-full py-3 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transition duration-200 transform hover:-translate-y-1"
         >
-          <Link to ="/approvisionnement">Se connecter</Link>
+          Se connecter
         </button>
         <button
           type="button"
@@ -61,4 +67,5 @@ export const Form: React.FC = () => {
     </form>
   );
 };
+
 

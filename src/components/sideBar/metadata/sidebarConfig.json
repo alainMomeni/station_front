@@ -1,0 +1,300 @@
+{
+  "sections": [
+    {
+      "id": "sales",
+      "menuItem": {
+        "id": "sales",
+        "type": "image",
+        "src": "/src/assets/svg/vente_menu.svg",
+        "hoverSrc": "/src/assets/svg/vente_menu.svg",
+        "alt": "sales",
+        "width": 26,
+        "height": 26,
+        "className": "hover:border p-2 hover:bg-customIndigoHover rounded-lg cursor-pointer"
+      },
+      "sidebarItems": [
+        {
+          "icon": "/src/assets/svg/vente.svg",
+          "title": "Ventes",
+          "subItems": [
+            {
+              "title": "Produits",
+              "to": "/produits"
+            },
+            {
+              "title": "Ventes",
+              "to": "/ventes"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/supply.svg",
+          "title": "Approvisionnement",
+          "subItems": [
+            {
+              "title": "Bons de Commande",
+              "to": "/bons-de-commande"
+            },
+            {
+              "title": "Approvisionnement",
+              "to": "/approvisionnement"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/stock.svg",
+          "title": "Stocks",
+          "subItems": [
+            {
+              "title": "Stock Produits Blancs",
+              "to": "/stock-fuel"
+            },
+            {
+              "title": "Stock Produits Boutique",
+              "to": "/stock-OLA"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/clientele.svg",
+          "title": "Clientèle",
+          "subItems": [
+            {
+              "title": "Comptes",
+              "to": "/comptes"
+            },
+            {
+              "title": "Clients",
+              "to": "/clients"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/images/activite.png",
+          "title": "Suivi de l'Activité",
+          "subItems": [
+            {
+              "title": "Inventaires Fuel",
+              "to": "/inventaire-fuel"
+            },
+            {
+              "title": "Inventaires OLA",
+              "to": "/inventaire-OLA"
+            },
+            {
+              "title": "Control Stock Fuel",
+              "to": "/control-stock"
+            },
+            {
+              "title": "Constats",
+              "to": "/constat"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/images/achats.png",
+          "title": "Achats / Dépenses",
+          "subItems": [
+            {
+              "title": "Commandes",
+              "to": "/commandes"
+            },
+            {
+              "title": "Dépenses",
+              "to": "/depenses"
+            },
+            {
+              "title": "Salaires",
+              "to": "/salaire"
+            },
+            {
+              "title": "Manquants",
+              "to": "/manquant"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reporting",
+      "menuItem": {
+        "id": "reporting",
+        "type": "image",
+        "src": "/src/assets/svg/repport_menu.svg",
+        "hoverSrc": "/src/assets/svg/repport_menu.svg",
+        "alt": "chart",
+        "width": 26,
+        "height": 26,
+        "className": "hover:border p-2 hover:bg-customIndigoHover rounded-lg cursor-pointer"
+      },
+      "sidebarItems": [
+        {
+          "icon": "/src/assets/svg/rapport_vente.svg",
+          "title": "Rapports de ventes",
+          "subItems": [
+            {
+              "title": "Ventes Produits",
+              "to": "/rapports/ventes-journalieres"
+            },
+            {
+              "title": "Ventes Fuel",
+              "to": "/rapports/analyse-mensuelle"
+            },
+            {
+              "title": "Ventes Journalières",
+              "to": "/rapports/analyse-mensuelle"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/rapport_supply.svg",
+          "title": "Rapports d'approvisionnements",
+          "subItems": [
+            {
+              "title": "Suivi des approvisionnements",
+              "to": "/rapports/ventes-journalieres"
+            },
+            {
+              "title": "Rapport des Bons de commande",
+              "to": "/rapports/analyse-mensuelle"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/rapport_stock.svg",
+          "title": "Rapports de stocks",
+          "subItems": [
+            {
+              "title": "Stock Produits Blancs",
+              "to": "/rapports/ventes-journalieres"
+            },
+            {
+              "title": "Stock Produits Boutique",
+              "to": "/rapports/analyse-mensuelle"
+            },
+            {
+              "title": "Suivi des Versements",
+              "to": "/rapports/analyse-mensuelle"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/rapport_achat.svg",
+          "title": "Rapports d'Achats/Dépenses",
+          "subItems": [
+            {
+              "title": "Dépenses Totales",
+              "to": "/rapports/ventes-journalieres"
+            },
+            {
+              "title": "Suivi des Salaires",
+              "to": "/rapports/analyse-mensuelle"
+            },
+            {
+              "title": "Analyse des Manquants",
+              "to": "/rapports/analyse-mensuelle"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/rapport_suivi.svg",
+          "title": "Rapports de suivi des activités",
+          "subItems": [
+            {
+              "title": "Versements Quotidiens",
+              "to": "/rapports/ventes-journalieres"
+            },
+            {
+              "title": "Règlements Clients",
+              "to": "/rapports/analyse-mensuelle"
+            },
+            {
+              "title": "Synthèse SQV",
+              "to": "/rapports/analyse-mensuelle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "menuItem": {
+        "id": "settings",
+        "type": "image",
+        "src": "/src/assets/svg/param_menu.svg",
+        "hoverSrc": "/src/assets/svg/param_menu.svg",
+        "alt": "setting",
+        "width": 26,
+        "height": 26,
+        "className": "hover:border p-2 hover:bg-customIndigoHover rounded-lg cursor-pointer"
+      },
+      "sidebarItems": [
+        {
+          "icon": "/src/assets/svg/gestion_role.svg",
+          "title": "Gestion des Roles",
+          "subItems": [
+            {
+              "title": "Roles",
+              "to": "/parametres"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/parametre_produit.svg",
+          "title": "Paramètres des produits",
+          "subItems": [
+            {
+              "title": "Catégories de Produits",
+              "to": "/parametres"
+            },
+            {
+              "title": "Paramètres de Prix",
+              "to": "/utilisateurs"
+            },
+            {
+              "title": "Stock Minimun",
+              "to": "/utilisateurs"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/parametre_paiement.svg",
+          "title": "Paramètres de Paiement",
+          "subItems": [
+            {
+              "title": "Modes de paiement",
+              "to": "/parametres"
+            },
+            {
+              "title": "Gestion des Vourchers",
+              "to": "/utilisateurs"
+            },
+            {
+              "title": "Réconciliation Bancaire",
+              "to": "/utilisateurs"
+            }
+          ]
+        },
+        {
+          "icon": "/src/assets/svg/parametre_repport.svg",
+          "title": "Paramètres de Reporting",
+          "subItems": [
+            {
+              "title": "Configuration des Rapports",
+              "to": "/parametres"
+            },
+            {
+              "title": "Périodicité des Rapports",
+              "to": "/utilisateurs"
+            },
+            {
+              "title": "Exportation des données",
+              "to": "/utilisateurs"
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}
