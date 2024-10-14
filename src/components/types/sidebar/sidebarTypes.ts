@@ -3,7 +3,7 @@ export interface MenuItemType {
   id: string;
   type: 'image';
   src: string;
-  hoverSrc?: string;
+  hoverSrc?: string; // Support de l'image au survol
   alt: string;
   width: number;
   height: number;

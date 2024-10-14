@@ -10,6 +10,9 @@ interface MenuItemProps {
 const MenuItem: React.FC<MenuItemProps> = ({ item, isActive, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  // Choisir l'icône en fonction de l'état (survolé ou actif)
+  const iconSrc = isActive || isHovered ? item.hoverSrc || item.src : item.src;
+
   return (
     <div
       className={`${item.className} ${isActive ? 'bg-customIndigoHover' : ''}`}
@@ -18,7 +21,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, isActive, onClick }) => {
       onClick={onClick}
     >
       <img
-        src={isHovered && item.hoverSrc ? item.hoverSrc : item.src}
+        src={iconSrc}
         alt={item.alt}
         width={item.width}
         height={item.height}

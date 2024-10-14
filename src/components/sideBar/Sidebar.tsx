@@ -1,4 +1,3 @@
-// components/Sidebar.tsx
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import MenuItem from "./menuItem";
@@ -16,11 +15,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const location = useLocation();
   const [activeSection, setActiveSection] = useState<string>("sales");
   const [openItemIndex, setOpenItemIndex] = useState<number | null>(null);
-  
-  // Mémoriser la config typée
+
+  // Typage de la configuration
   const typedConfig = useMemo(() => sidebarConfig as SidebarConfig, []);
-  
-  // Mémoriser la fonction de recherche de section
+
+  // Trouver la section active basée sur le chemin
   const findActiveSection = useCallback((pathname: string) => {
     return typedConfig.sections.find((section: SectionType) =>
       section.sidebarItems.some(item =>
@@ -29,7 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     );
   }, [typedConfig.sections]);
 
-  // Effet avec toutes les dépendances nécessaires
+  // Effectuer la mise à jour de la section active en fonction du chemin
   useEffect(() => {
     const section = findActiveSection(location.pathname);
     if (section) {
@@ -41,7 +40,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     setOpenItemIndex(openItemIndex === index ? null : index);
   };
 
-  // Mémoriser les items actifs
+  // Récupérer les items actifs pour la section
   const activeItems = useMemo(() => {
     return typedConfig.sections.find((section: SectionType) => 
       section.id === activeSection
@@ -55,6 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:relative md:translate-x-0 md:block md:w-80`}
       >
+        {/* Logo */}
         <div className="flex flex-col justify-center items-center p-6">
           <h1 className="text-xl md:text-2xl font-bold flex items-center">
             <img
@@ -71,6 +71,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           </h1>
         </div>
 
+        {/* Sections de menu */}
         <div className="flex justify-center items-center space-x-3 p-4">
           {typedConfig.sections.map((section: SectionType) => (
             <MenuItem
@@ -82,6 +83,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           ))}
         </div>
 
+        {/* Items du menu latéral */}
         <nav className="mt-4 px-6">
           {activeItems.map((item, index) => (
             <SidebarItem
@@ -103,6 +105,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </nav>
       </aside>
 
+      {/* Overlay pour mobile */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
