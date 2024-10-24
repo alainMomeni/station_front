@@ -1,3 +1,5 @@
+import { LogoIcon } from "@/assets/svg/logo";
+
 const NotificationsModal: React.FC = () => {
   return (
     <div className="absolute top-12 right-0 w-80 z-20 bg-white shadow-lg rounded-lg">
@@ -5,11 +7,7 @@ const NotificationsModal: React.FC = () => {
         <ul className="space-y-0">
           {/* Notification 1 */}
           <li className="flex items-start cursor-pointer w-full rounded-lg transition duration-300 ease-in-out hover:bg-gray-100 hover:shadow-md p-3 border-b">
-            <img
-              src="/src/assets/svg/logo.svg"
-              alt="Profile"
-              className="w-10 h-10 rounded-full mr-3"
-            />
+            <LogoIcon className="w-10 h-10 rounded-full mr-3" />
             <div>
               <p className="text-sm text-gray-700">Vous avez reçu un nouveau message</p>
               <p className="text-xs text-blue-500">Il y a quelques minutes</p>
@@ -18,11 +16,7 @@ const NotificationsModal: React.FC = () => {
 
           {/* Notification 2 */}
           <li className="flex items-start cursor-pointer w-full rounded-lg transition duration-300 ease-in-out hover:bg-gray-100 hover:shadow-md p-3 border-b">
-            <img
-              src="/src/assets/svg/logo.svg"
-              alt="Profile"
-              className="w-10 h-10 rounded-full mr-3"
-            />
+          <LogoIcon className="w-10 h-10 rounded-full mr-3" />
             <div>
               <p className="text-sm text-gray-700">Vous avez reçu un nouveau message</p>
               <p className="text-xs text-blue-500">Il y a 10 minutes</p>
@@ -31,11 +25,7 @@ const NotificationsModal: React.FC = () => {
 
           {/* Notification 3 */}
           <li className="flex items-start cursor-pointer w-full rounded-lg transition duration-300 ease-in-out hover:bg-gray-100 hover:shadow-md p-3 border-b">
-            <img
-              src="/src/assets/svg/logo.svg"
-              alt="Profile"
-              className="w-10 h-10 rounded-full mr-3"
-            />
+          <LogoIcon className="w-10 h-10 rounded-full mr-3" />
             <div>
               <p className="text-sm text-gray-700">Vous avez reçu un nouveau message</p>
               <p className="text-xs text-blue-500">Il y a 44 minutes</p>

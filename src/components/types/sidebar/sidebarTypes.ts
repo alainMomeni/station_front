@@ -1,9 +1,11 @@
-// types/sidebarTypes.ts
 import { FC } from 'react';
 
 export interface IconProps {
   className?: string;
   color?: string;
+  stroke?: string;
+  width?: number;
+  height?: number;
 }
 
 export interface MenuItemType {

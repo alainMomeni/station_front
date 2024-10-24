@@ -4,6 +4,19 @@ import { RapportMenuIcon } from '@/assets/svg/rapportMenuIcon';
 import { ParamMenuIcon } from '@/assets/svg/paramMenuIcon';
 import { VenteIcon } from '@/assets/svg/venteIcon';
 import { SupplyIcon } from '@/assets/svg/supplyIcon';
+import { StockIcon } from '@/assets/svg/stockIcon';
+import { ClienteleIcon } from '@/assets/svg/clienteleIcon';
+import { ActiviteIcon } from '@/assets/svg/activiteIcon';
+import { AchatDepenseIcon } from '@/assets/svg/achatdepenseIcon';
+import { RapportStockIcon } from '@/assets/svg/rapportStockIcon';
+import { RapportSuiviIcon } from '@/assets/svg/rapportSuiviIcon';
+import { RapportAchatIcon } from '@/assets/svg/rapportAchatIcon';
+import { RapportSupplyIcon } from '@/assets/svg/rapportSupplyIcon';
+import { RapportVenteIcon } from '@/assets/svg/rapportVenteIcon';
+import { GestionRoleIcon } from '@/assets/svg/gestionRoleIcon';
+import { ParamPaiementIcon } from '@/assets/svg/parametrePaiementIcon';
+import { ParamProduitIcon } from '@/assets/svg/parametreProduitIcon';
+import { ParamRepportIcon } from '@/assets/svg/parametreRepportIcon';
 
 export const sidebarConfig: SidebarConfig = {
   sections: [
@@ -37,7 +50,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: RapportMenuIcon,
+          icon: StockIcon,
           title: "Stocks",
           subItems: [
             { title: "Stock Produits Blancs", to: "/stock-fuel" },
@@ -45,7 +58,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: RapportMenuIcon,
+          icon: ClienteleIcon,
           title: "Clientèle",
           subItems: [
             { title: "Comptes", to: "/comptes" },
@@ -53,7 +66,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: RapportMenuIcon,
+          icon: ActiviteIcon,
           title: "Suivi de l'Activité",
           subItems: [
             { title: "Inventaires Fuel", to: "/inventaire-fuel" },
@@ -63,7 +76,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: RapportMenuIcon,
+          icon: AchatDepenseIcon,
           title: "Achats / Dépenses",
           subItems: [
             { title: "Commandes", to: "/commandes" },
@@ -88,7 +101,7 @@ export const sidebarConfig: SidebarConfig = {
       },
       sidebarItems: [
         {
-          icon: RapportMenuIcon,
+          icon: RapportVenteIcon,
           title: "Rapports de ventes",
           subItems: [
             { title: "Ventes Produits", to: "/rapports/ventes-journalieres" },
@@ -97,7 +110,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: RapportMenuIcon,
+          icon: RapportSupplyIcon,
           title: "Rapports d'approvisionnements",
           subItems: [
             { title: "Suivi des approvisionnements", to: "/rapports/ventes-journalieres" },
@@ -105,7 +118,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: RapportMenuIcon,
+          icon: RapportStockIcon,
           title: "Rapports de stocks",
           subItems: [
             { title: "Stock Produits Blancs", to: "/rapports/ventes-journalieres" },
@@ -114,7 +127,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: ParamMenuIcon,
+          icon: RapportAchatIcon,
           title: "Rapports d'Achats/Dépenses",
           subItems: [
             { title: "Dépenses Totales", to: "/rapports/ventes-journalieres" },
@@ -123,7 +136,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: ParamMenuIcon,
+          icon: RapportSuiviIcon,
           title: "Rapports de suivi des activités",
           subItems: [
             { title: "Versements Quotidiens", to: "/rapports/ventes-journalieres" },
@@ -147,14 +160,14 @@ export const sidebarConfig: SidebarConfig = {
       },
       sidebarItems: [
         {
-          icon: ParamMenuIcon,
+          icon: GestionRoleIcon,
           title: "Gestion des Roles",
           subItems: [
             { title: "Roles", to: "/parametres" }
           ]
         },
         {
-          icon: ParamMenuIcon,
+          icon: ParamProduitIcon,
           title: "Paramètres des produits",
           subItems: [
             { title: "Catégories de Produits", to: "/parametres" },
@@ -163,7 +176,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: ParamMenuIcon,
+          icon: ParamPaiementIcon,
           title: "Paramètres de Paiement",
           subItems: [
             { title: "Modes de paiement", to: "/parametres" },
@@ -172,7 +185,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: ParamMenuIcon,
+          icon: ParamRepportIcon,
           title: "Paramètres de Reporting",
           subItems: [
             { title: "Configuration des Rapports", to: "/parametres" },
