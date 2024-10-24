@@ -1,53 +1,78 @@
-import { ChartOptions } from 'chart.js'; // Ajout de l'import
+import { ChartOptions, ChartTypeRegistry } from 'chart.js';
 import { CustomChartType } from '@components/types/dashboard/dashboard';
 
-export const getDefaultOptions = (type: CustomChartType): ChartOptions<CustomChartType> => {
-  const commonOptions: ChartOptions<CustomChartType> = {
+export const getDefaultOptions = (type: CustomChartType): ChartOptions<keyof ChartTypeRegistry> => {
+  const baseOptions: ChartOptions<keyof ChartTypeRegistry> = {
     responsive: true,
     maintainAspectRatio: false,
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-      },
-      y: {
-        grid: {
-          color: 'rgba(0, 0, 0, 0.1)',
-        },
-      },
-    },
   };
 
   switch (type) {
     case 'bar':
-    case 'line':
       return {
-        ...commonOptions,
+        ...baseOptions,
         plugins: {
           legend: {
             display: true,
             position: 'top',
           },
         },
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+          },
+          y: {
+            grid: {
+              color: 'rgba(0, 0, 0, 0.1)',
+            },
+          },
+        },
+      };
+
+    case 'line':
+      return {
+        ...baseOptions,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+        },
+        scales: {
+          x: {
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            grid: {
+              color: 'rgba(0, 0, 0, 0.1)'
+            },
+            min: 0,
+            max: 400,
+            ticks: {
+              stepSize: 100
+            }
+          },
+        },
       };
 
     case 'doughnut':
       return {
-        responsive: true,
-        maintainAspectRatio: false,
+        ...baseOptions,
         plugins: {
           legend: {
             position: 'bottom',
           },
         },
         cutout: '75%',
-      } as ChartOptions<'doughnut'>;
+      };
 
     case 'radar':
       return {
-        responsive: true,
-        maintainAspectRatio: false,
+        ...baseOptions,
         plugins: {
           legend: {
             display: false,
@@ -58,13 +83,13 @@ export const getDefaultOptions = (type: CustomChartType): ChartOptions<CustomCha
             beginAtZero: true,
             max: 100,
             ticks: {
-              stepSize: 20,
-            },
-          },
-        },
-      } as ChartOptions<'radar'>;
+              stepSize: 20
+            }
+          }
+        }
+      };
 
     default:
-      return commonOptions;
+      return baseOptions;
   }
 };

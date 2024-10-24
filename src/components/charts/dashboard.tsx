@@ -8,9 +8,9 @@ interface DashboardProps {
 
 const Dashboard: React.FC<DashboardProps> = ({ config }) => {
   return (
-    <div className="space-y-4 p-8">
-      <h2 className="text-3xl font-bold">{config.title}</h2>
-      <div className="grid gap-4 md:grid-cols-2">
+    <div className="p-6 space-y-6 bg-gray-50">
+      <h1 className="text-2xl font-bold">{config.title}</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {config.charts.map((chartConfig, index) => (
           <ChartCard key={index} config={chartConfig} />
         ))}

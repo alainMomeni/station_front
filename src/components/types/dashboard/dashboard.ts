@@ -1,4 +1,8 @@
-import { ChartOptions as ChartJSOptions } from 'chart.js';
+import { 
+  ChartData, 
+  ChartOptions,
+  ChartTypeRegistry
+} from 'chart.js';
 
 export type CustomChartType = 'bar' | 'line' | 'doughnut' | 'radar';
 
@@ -13,7 +17,8 @@ export interface Metric {
   trend: MetricTrend;
 }
 
-export interface ChartDataset {
+// Type générique pour les datasets selon le type de graphique
+export interface CustomDataset<T extends CustomChartType> {
   label: string;
   data: number[];
   backgroundColor?: string | string[];
@@ -21,25 +26,32 @@ export interface ChartDataset {
   tension?: number;
   borderWidth?: number;
   pointRadius?: number;
+  pointBackgroundColor?: string;
   fill?: boolean;
   barThickness?: number;
 }
 
-export interface CustomChartData {
+// Type générique pour les données du graphique
+export interface CustomChartData<T extends CustomChartType> {
   labels: string[];
-  datasets: ChartDataset[];
+  datasets: CustomDataset<T>[];
 }
 
-export interface ChartConfig {
-  type: CustomChartType;
+// Configuration générique pour chaque type de graphique
+export interface ChartConfig<T extends CustomChartType = CustomChartType> {
+  type: T;
   title: string;
   metric: Metric;
-  chartData: CustomChartData;
-  options?: ChartJSOptions<CustomChartType>;
+  chartData: CustomChartData<T>;
+  options?: ChartOptions<keyof ChartTypeRegistry>;
   footer?: string;
+  className?: string;
 }
 
 export interface DashboardConfig {
   title: string;
   charts: ChartConfig[];
 }
+
+// Helpers pour les options spécifiques à chaque type de graphique
+export type ChartOptionsWithType<T extends CustomChartType> = ChartOptions<keyof ChartTypeRegistry>;

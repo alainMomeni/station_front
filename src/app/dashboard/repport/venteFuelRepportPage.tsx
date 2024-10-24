@@ -1,13 +1,36 @@
 import React from 'react';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement,
+  ArcElement,
+  RadialLinearScale,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
 import Dashboard from '@components/charts/dashboard';
 import { dashboardData } from '@components/charts/metadata/dashboardData';
-import '@components/charts/metadata/config';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement,
+  ArcElement,
+  RadialLinearScale,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const VenteFuelReportPage: React.FC = () => {
   return (
-    <div className="container mx-auto">
-      <Dashboard config={dashboardData.venteFuel} />
-    </div>
+    <Dashboard config={dashboardData.venteFuel} />
   );
 };
 
