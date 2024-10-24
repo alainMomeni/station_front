@@ -104,9 +104,9 @@ export const sidebarConfig: SidebarConfig = {
           icon: RapportVenteIcon,
           title: "Rapports de ventes",
           subItems: [
-            { title: "Ventes Produits", to: "/rapports/ventes-journalieres" },
-            { title: "Ventes Fuel", to: "/rapports/analyse-mensuelle" },
-            { title: "Ventes Journalières", to: "/rapports/analyse-mensuelle" }
+            { title: "Ventes Produits", to: "/rapport-ventes-produits" },
+            { title: "Ventes Fuel", to: "/rapport-ventes-fuel" },
+            { title: "Ventes Journalières", to: "/rapport-ventes-journalieres" }
           ]
         },
         {
