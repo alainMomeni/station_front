@@ -1,4 +1,5 @@
 import { Form } from "./form";
+import HomePicture from '@assets/images/home-bg.png'
 
 export const Login: React.FC = () => {
   return (
@@ -51,7 +52,7 @@ export const Login: React.FC = () => {
 
         {/* Right Section */}
         <div className="lg:w-1/2 w-full hidden lg:block">
-          <img className="w-full h-full object-cover" src="/src/assets/images/home-bg.png" alt="Fun background" />
+          <img className="w-full h-full object-cover" src={HomePicture} alt="Fun background" />
         </div>
       </div>
     </div>

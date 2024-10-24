@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { MenuItemType } from '@components/types/sidebar/sidebarTypes';
+import React, { useState } from 'react';
+import { MenuItemType } from '@/components/types/sidebar/sidebarTypes';
 
 interface MenuItemProps {
   item: MenuItemType;
@@ -9,10 +9,9 @@ interface MenuItemProps {
 
 const MenuItem: React.FC<MenuItemProps> = ({ item, isActive, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
-
-  // Choisir l'icône en fonction de l'état (survolé ou actif)
-  const iconSrc = isActive || isHovered ? item.hoverSrc || item.src : item.src;
-
+  
+  const Icon = (isActive || isHovered) && item.activeIcon ? item.activeIcon : item.icon;
+  
   return (
     <div
       className={`${item.className} ${isActive ? 'bg-customIndigoHover' : ''}`}
@@ -20,11 +19,9 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, isActive, onClick }) => {
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
     >
-      <img
-        src={iconSrc}
-        alt={item.alt}
-        width={item.width}
-        height={item.height}
+      <Icon
+        color={(isActive || isHovered) ? '#FFFFFF' : '#292D32'}
+        className={`w-${item.width} h-${item.height}`}
       />
     </div>
   );

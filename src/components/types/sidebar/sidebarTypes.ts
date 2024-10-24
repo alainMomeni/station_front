@@ -1,9 +1,16 @@
-// types/sidebar.ts
+// types/sidebarTypes.ts
+import { FC } from 'react';
+
+export interface IconProps {
+  className?: string;
+  color?: string;
+}
+
 export interface MenuItemType {
   id: string;
   type: 'image';
-  src: string;
-  hoverSrc?: string; // Support de l'image au survol
+  icon: FC<IconProps>;
+  activeIcon?: FC<IconProps>;
   alt: string;
   width: number;
   height: number;
@@ -16,7 +23,7 @@ export interface SubItemType {
 }
 
 export interface SidebarItemType {
-  icon: string;
+  icon: FC<IconProps>;
   title: string;
   subItems: SubItemType[];
 }

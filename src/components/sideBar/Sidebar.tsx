@@ -3,8 +3,9 @@ import { useLocation } from "react-router-dom";
 import MenuItem from "./menuItem";
 import SidebarItem from "./sidebarItem";
 import SidebarSubItem from "./sidebarSubItem";
-import sidebarConfig from "@components/sideBar/metadata/sidebarConfig.json";
-import { SectionType, SidebarConfig } from "@components/types/sidebar/sidebarTypes";
+import { sidebarConfig } from "@components/sideBar/metadata/sidebarConfig";
+import { SectionType } from "@components/types/sidebar/sidebarTypes";
+import { LogoIcon } from "@/assets/svg/logo";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -16,19 +17,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const [activeSection, setActiveSection] = useState<string>("sales");
   const [openItemIndex, setOpenItemIndex] = useState<number | null>(null);
 
-  // Typage de la configuration
-  const typedConfig = useMemo(() => sidebarConfig as SidebarConfig, []);
-
-  // Trouver la section active basée sur le chemin
   const findActiveSection = useCallback((pathname: string) => {
-    return typedConfig.sections.find((section: SectionType) =>
+    return sidebarConfig.sections.find((section: SectionType) =>
       section.sidebarItems.some(item =>
         item.subItems.some(subItem => pathname.startsWith(subItem.to))
       )
     );
-  }, [typedConfig.sections]);
+  }, []);
 
-  // Effectuer la mise à jour de la section active en fonction du chemin
   useEffect(() => {
     const section = findActiveSection(location.pathname);
     if (section) {
@@ -40,12 +36,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     setOpenItemIndex(openItemIndex === index ? null : index);
   };
 
-  // Récupérer les items actifs pour la section
   const activeItems = useMemo(() => {
-    return typedConfig.sections.find((section: SectionType) => 
+    return sidebarConfig.sections.find((section: SectionType) =>
       section.id === activeSection
     )?.sidebarItems || [];
-  }, [typedConfig.sections, activeSection]);
+  }, [activeSection]);
 
   return (
     <div>
@@ -54,14 +49,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:relative md:translate-x-0 md:block md:w-80`}
       >
-        {/* Logo */}
         <div className="flex flex-col justify-center items-center p-6">
           <h1 className="text-xl md:text-2xl font-bold flex items-center">
-            <img
-              src="/src/assets/svg/logo.svg"
-              alt="Logo"
-              width="50"
-              height="50"
+            <LogoIcon
               className="mr-3"
             />
             Station OLA
@@ -71,9 +61,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           </h1>
         </div>
 
-        {/* Sections de menu */}
         <div className="flex justify-center items-center space-x-3 p-4">
-          {typedConfig.sections.map((section: SectionType) => (
+          {sidebarConfig.sections.map((section: SectionType) => (
             <MenuItem
               key={section.id}
               item={section.menuItem}
@@ -83,7 +72,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           ))}
         </div>
 
-        {/* Items du menu latéral */}
         <nav className="mt-4 px-6">
           {activeItems.map((item, index) => (
             <SidebarItem
@@ -105,7 +93,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </nav>
       </aside>
 
-      {/* Overlay pour mobile */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
