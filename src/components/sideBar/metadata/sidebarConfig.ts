@@ -1,7 +1,9 @@
 import { SidebarConfig } from '@components/types/sidebar/sidebarTypes';
 import { VenteMenuIcon } from '@/assets/svg/venteMenuIcon';
 import { RapportMenuIcon } from '@/assets/svg/rapportMenuIcon';
-import { ParamMenuIcon } from '@/assets/svg/ParamMenuIcon';
+import { ParamMenuIcon } from '@/assets/svg/paramMenuIcon';
+import { VenteIcon } from '@/assets/svg/venteIcon';
+import { SupplyIcon } from '@/assets/svg/supplyIcon';
 
 export const sidebarConfig: SidebarConfig = {
   sections: [
@@ -19,7 +21,7 @@ export const sidebarConfig: SidebarConfig = {
       },
       sidebarItems: [
         {
-          icon: VenteMenuIcon,
+          icon: VenteIcon,
           title: "Ventes",
           subItems: [
             { title: "Produits", to: "/produits" },
@@ -27,7 +29,7 @@ export const sidebarConfig: SidebarConfig = {
           ]
         },
         {
-          icon: RapportMenuIcon,
+          icon: SupplyIcon,
           title: "Approvisionnement",
           subItems: [
             { title: "Bons de Commande", to: "/bons-de-commande" },
