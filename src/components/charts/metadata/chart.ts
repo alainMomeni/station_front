@@ -1,8 +1,8 @@
-import { ChartOptions } from 'chart.js';
-import { ChartType } from '@components/types/dashboard/dashboard';
+import { ChartOptions } from 'chart.js'; // Ajout de l'import
+import { CustomChartType } from '@components/types/dashboard/dashboard';
 
-export const getDefaultOptions = (type: ChartType): ChartOptions<ChartType> => {
-  const commonOptions: Partial<ChartOptions<ChartType>> = {
+export const getDefaultOptions = (type: CustomChartType): ChartOptions<CustomChartType> => {
+  const commonOptions: ChartOptions<CustomChartType> = {
     responsive: true,
     maintainAspectRatio: false,
     scales: {
@@ -21,16 +21,6 @@ export const getDefaultOptions = (type: ChartType): ChartOptions<ChartType> => {
 
   switch (type) {
     case 'bar':
-      return {
-        ...commonOptions,
-        plugins: {
-          legend: {
-            display: true,
-            position: 'top',
-          },
-        },
-      };
-
     case 'line':
       return {
         ...commonOptions,
@@ -52,7 +42,7 @@ export const getDefaultOptions = (type: ChartType): ChartOptions<ChartType> => {
           },
         },
         cutout: '75%',
-      };
+      } as ChartOptions<'doughnut'>;
 
     case 'radar':
       return {
@@ -72,9 +62,9 @@ export const getDefaultOptions = (type: ChartType): ChartOptions<ChartType> => {
             },
           },
         },
-      };
+      } as ChartOptions<'radar'>;
 
     default:
-      return commonOptions as ChartOptions<ChartType>;
+      return commonOptions;
   }
 };
