@@ -28,6 +28,8 @@ import CommandTablePage from "../dashboard/sales/commandes/table/commandTablePag
 import VenteProduitRepportPage from "../dashboard/repport/venteProduitRepportPage";
 import VenteFuelRepportPage from "../dashboard/repport/venteFuelRepportPage";
 import VenteJournaliereRepportPage from "../dashboard/repport/venteJournaliereRepportPage";
+import NotificationsPage from "../dashboard/notification/notificationPage";
+import UserProfilePage from "../dashboard/profil/userPage";
 
 const appRouters = createBrowserRouter(
   createRoutesFromElements(
@@ -56,6 +58,8 @@ const appRouters = createBrowserRouter(
         <Route path="/rapport-ventes-produits" element={<VenteProduitRepportPage />} />
         <Route path="/rapport-ventes-fuel" element={<VenteFuelRepportPage />} />
         <Route path="/rapport-ventes-journalieres" element={<VenteJournaliereRepportPage />} />
+        <Route path="/notifications" element={<NotificationsPage />} />
+        <Route path="/profil" element={<UserProfilePage />} />
       </Route>
       {/* Ajoutez les autres routes ici en suivant le même modèle */}
     </>

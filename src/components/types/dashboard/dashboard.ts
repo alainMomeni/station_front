@@ -1,10 +1,16 @@
-import { 
+// src/components/types/dashboard/dashboard.ts
+import type { 
   ChartData, 
   ChartOptions,
-  ChartTypeRegistry
+  CoreChartOptions,
+  ElementChartOptions,
+  PluginChartOptions,
+  DatasetChartOptions,
+  ScaleChartOptions,
+  ChartTypeRegistry,
 } from 'chart.js';
 
-export type CustomChartType = 'bar' | 'line' | 'doughnut' | 'radar';
+export type ChartType = 'bar' | 'line' | 'doughnut' | 'radar';
 
 export interface MetricTrend {
   value: number;
@@ -17,41 +23,44 @@ export interface Metric {
   trend: MetricTrend;
 }
 
-// Type générique pour les datasets selon le type de graphique
-export interface CustomDataset<T extends CustomChartType> {
-  label: string;
-  data: number[];
-  backgroundColor?: string | string[];
-  borderColor?: string;
-  tension?: number;
-  borderWidth?: number;
-  pointRadius?: number;
-  pointBackgroundColor?: string;
-  fill?: boolean;
-  barThickness?: number;
-}
+export type ChartTypeToRegistry<T extends ChartType> = T extends 'bar' 
+  ? 'bar' 
+  : T extends 'line' 
+  ? 'line'
+  : T extends 'doughnut'
+  ? 'doughnut'
+  : T extends 'radar'
+  ? 'radar'
+  : never;
 
-// Type générique pour les données du graphique
-export interface CustomChartData<T extends CustomChartType> {
-  labels: string[];
-  datasets: CustomDataset<T>[];
-}
+export type ChartDataType<T extends ChartType> = ChartData<ChartTypeToRegistry<T>>;
 
-// Configuration générique pour chaque type de graphique
-export interface ChartConfig<T extends CustomChartType = CustomChartType> {
+// Redéfinition de ChartOptionsType pour accepter des options partielles des configurations Core, Plugin, etc.
+export type ChartOptionsType<T extends ChartType> = Partial<CoreChartOptions<ChartTypeToRegistry<T>> & 
+  ElementChartOptions<ChartTypeToRegistry<T>> & 
+  PluginChartOptions<ChartTypeToRegistry<T>> & 
+  DatasetChartOptions<ChartTypeToRegistry<T>> & 
+  ScaleChartOptions<ChartTypeToRegistry<T>> & 
+  ChartTypeRegistry[ChartTypeToRegistry<T>]["chartOptions"]
+>;
+
+export interface BaseChartConfig<T extends ChartType> {
   type: T;
   title: string;
   metric: Metric;
-  chartData: CustomChartData<T>;
-  options?: ChartOptions<keyof ChartTypeRegistry>;
+  chartData: ChartDataType<T>;
+  options?: ChartOptionsType<T>;
   footer?: string;
   className?: string;
 }
+
+export type ChartConfig = 
+  | BaseChartConfig<'bar'>
+  | BaseChartConfig<'line'>
+  | BaseChartConfig<'doughnut'>
+  | BaseChartConfig<'radar'>;
 
 export interface DashboardConfig {
   title: string;
   charts: ChartConfig[];
 }
-
-// Helpers pour les options spécifiques à chaque type de graphique
-export type ChartOptionsWithType<T extends CustomChartType> = ChartOptions<keyof ChartTypeRegistry>;

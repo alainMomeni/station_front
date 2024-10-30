@@ -1,11 +1,11 @@
-import { ChartOptions, ChartTypeRegistry } from 'chart.js';
-import { CustomChartType } from '@components/types/dashboard/dashboard';
+// src/components/charts/metadata/chart.ts
+import { ChartOptionsType, ChartType } from '@components/types/dashboard/dashboard';
 
-export const getDefaultOptions = (type: CustomChartType): ChartOptions<keyof ChartTypeRegistry> => {
-  const baseOptions: ChartOptions<keyof ChartTypeRegistry> = {
+export const getDefaultOptions = <T extends ChartType>(type: T): ChartOptionsType<T> => {
+  const baseOptions = {
     responsive: true,
     maintainAspectRatio: false,
-  };
+  } as ChartOptionsType<T>;
 
   switch (type) {
     case 'bar':
@@ -29,7 +29,7 @@ export const getDefaultOptions = (type: CustomChartType): ChartOptions<keyof Cha
             },
           },
         },
-      };
+      } as ChartOptionsType<'bar'>;
 
     case 'line':
       return {
@@ -57,7 +57,7 @@ export const getDefaultOptions = (type: CustomChartType): ChartOptions<keyof Cha
             }
           },
         },
-      };
+      } as ChartOptionsType<'line'>;
 
     case 'doughnut':
       return {
@@ -68,7 +68,7 @@ export const getDefaultOptions = (type: CustomChartType): ChartOptions<keyof Cha
           },
         },
         cutout: '75%',
-      };
+      } as ChartOptionsType<'doughnut'>;
 
     case 'radar':
       return {
@@ -83,11 +83,11 @@ export const getDefaultOptions = (type: CustomChartType): ChartOptions<keyof Cha
             beginAtZero: true,
             max: 100,
             ticks: {
-              stepSize: 20
-            }
-          }
-        }
-      };
+              stepSize: 20,
+            },
+          },
+        },
+      } as ChartOptionsType<'radar'>;
 
     default:
       return baseOptions;

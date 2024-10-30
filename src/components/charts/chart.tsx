@@ -1,7 +1,7 @@
 import React from 'react';
 import { Bar, Line, Doughnut, Radar } from 'react-chartjs-2';
 import { ArrowUp, ArrowDown } from 'lucide-react';
-import type { ChartConfig, CustomChartType } from '@components/types/dashboard/dashboard';
+import { ChartConfig, ChartOptionsType } from '@components/types/dashboard/dashboard';
 import { getDefaultOptions } from '@components/charts/metadata/chart';
 
 interface ChartCardProps {
@@ -14,24 +14,22 @@ const ChartCard: React.FC<ChartCardProps> = ({ config }) => {
   const renderChart = () => {
     switch (config.type) {
       case 'bar':
-        return <Bar data={config.chartData} options={options} />;
+        return <Bar data={config.chartData} options={options as ChartOptionsType<'bar'>} />;
       case 'line':
-        return <Line data={config.chartData} options={options} />;
+        return <Line data={config.chartData} options={options as ChartOptionsType<'line'>} />;
       case 'doughnut':
         return (
           <div className="relative">
-            <Doughnut data={config.chartData} options={options} />
-            {config.type === 'doughnut' && (
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                <div className="text-sm font-medium">Afternoon</div>
-                <div className="text-xs text-gray-500">1pm - 4pm</div>
-                <div className="font-bold">1,890 ventes</div>
-              </div>
-            )}
+            <Doughnut data={config.chartData} options={options as ChartOptionsType<'doughnut'>} />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+              <div className="text-sm font-medium">Afternoon</div>
+              <div className="text-xs text-gray-500">1pm - 4pm</div>
+              <div className="font-bold">1,890 ventes</div>
+            </div>
           </div>
         );
       case 'radar':
-        return <Radar data={config.chartData} options={options} />;
+        return <Radar data={config.chartData} options={options as ChartOptionsType<'radar'>} />;
       default:
         return null;
     }
