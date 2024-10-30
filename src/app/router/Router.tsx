@@ -30,6 +30,8 @@ import VenteFuelRepportPage from "../dashboard/repport/venteFuelRepportPage";
 import VenteJournaliereRepportPage from "../dashboard/repport/venteJournaliereRepportPage";
 import NotificationsPage from "../dashboard/notification/notificationPage";
 import UserProfilePage from "../dashboard/profil/userPage";
+import RolesPage from "../dashboard/setting/role/form/RoleFormPage";
+import RoleTablePage from "../dashboard/setting/role/table/RoleTablePage";
 
 const appRouters = createBrowserRouter(
   createRoutesFromElements(
@@ -60,6 +62,8 @@ const appRouters = createBrowserRouter(
         <Route path="/rapport-ventes-journalieres" element={<VenteJournaliereRepportPage />} />
         <Route path="/notifications" element={<NotificationsPage />} />
         <Route path="/profil" element={<UserProfilePage />} />
+        <Route path="/roles/form" element={<RolesPage />} />
+        <Route path="/roles" element={<RoleTablePage />} />
       </Route>
       {/* Ajoutez les autres routes ici en suivant le même modèle */}
     </>

@@ -163,7 +163,7 @@ export const sidebarConfig: SidebarConfig = {
           icon: GestionRoleIcon,
           title: "Gestion des Roles",
           subItems: [
-            { title: "Roles", to: "/parametres" }
+            { title: "Roles", to: "/roles" }
           ]
         },
         {

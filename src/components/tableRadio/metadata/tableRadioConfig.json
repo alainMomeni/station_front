@@ -1,0 +1,22 @@
+{
+    "rolesTable": {
+      "title": "Rôles de sécurité",
+      "columns": [
+        { "key": "table", "label": "Table" },
+        { "key": "read", "label": "Lire" },
+        { "key": "create", "label": "Créer" },
+        { "key": "edit", "label": "Modifier" },
+        { "key": "delete", "label": "Supprimer" },
+        { "key": "deactivate", "label": "Désactiver" }
+      ],
+      "rows": [
+        { "table": "Ventes fuel", "read": true, "create": true, "edit": true, "delete": true, "deactivate": true },
+        { "table": "Approvisionnement", "read": true, "create": false, "edit": false, "delete": false, "deactivate": false }
+      ],
+      "actions": [
+        { "type": "save", "label": "Enregistrer", "icon": "save" },
+        { "type": "cancel", "label": "Annuler", "icon": "back" }
+      ]
+    }
+  }
+  

@@ -669,6 +669,23 @@
         "status": "30",
         "notes": "5"
       }
+    ],
+    "roles": [
+      {
+        "select": false,
+        "date": "30-10-2024",
+        "nom": "Pompiste"
+      },
+      {
+        "select": false,
+        "date": "30-10-2024",
+        "nom": "Caissier"
+      },
+      {
+        "select": false,
+        "date": "30-10-2024",
+        "nom": "Gerant"
+      }
     ]
   }
   

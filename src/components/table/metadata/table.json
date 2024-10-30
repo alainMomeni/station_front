@@ -307,6 +307,26 @@
       "filterOptions": ["Newest", "Oldest"],
       "defaultStatus": "Control stock actifs",
       "defaultFilter": "Newest"
+    },
+    "roles": {
+      "title": "Roles",
+      "dataKey": "roles",
+      "addRoute": "/roles/form",
+      "editRoute": "/roles/form",
+      "columns": [
+        { "header": "Selectionner", "key": "select" },
+        { "header": "Date de création", "key": "date" },
+        { "header": "Nom", "key": "nom" }
+      ],
+      "buttons": [
+        { "text": "Ajouter", "icon": "@/assets/svg/ajouter.tsx" },
+        { "text": "Modifier", "icon": "@/assets/svg/modifier.tsx" },
+        { "text": "Supprimer", "icon": "@/assets/svg/supprimer.tsx" }
+      ],
+      "statusOptions": ["Roles actifs", "Roles inactifs"],
+      "filterOptions": ["Newest", "Oldest"],
+      "defaultStatus": "Roles actifs",
+      "defaultFilter": "Newest"
     }
   }
 }
