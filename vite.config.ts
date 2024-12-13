@@ -23,4 +23,30 @@ export default defineConfig({
       '@assets': path.resolve(root, './assets'),
     },
   },
+  server: {
+    port: 5173,
+    proxy: {
+      // Proxy configuration to handle CORS in development
+      '/api': {
+        target: 'http://localhost:8055',
+        changeOrigin: true,
+        secure: false,
+      },
+      '/auth': {
+        target: 'http://localhost:8055',
+        changeOrigin: true,
+        secure: false,
+      },
+      '/items': {
+        target: 'http://localhost:8055',
+        changeOrigin: true,
+        secure: false,
+      },
+      '/users': {
+        target: 'http://localhost:8055',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });

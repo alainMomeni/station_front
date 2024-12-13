@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import NotificationsModal from "./NotificationsModal";
-import AccountMenuModal from "./AccountMenuModal";
+import { AccountMenuModal } from "./AccountMenuModal";
 import HambergerIcon from "@/assets/svg/hambergerIcon";
-import { RingIcon } from "@/assets/svg/ringIcon"; // Assurez-vous que le chemin d'importation est correct
+import { RingIcon } from "@/assets/svg/ringIcon";
+import { HeaderProps } from '@components/types/auth/auth.types';
 
-const Header: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
+const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
 
@@ -33,7 +34,7 @@ const Header: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
           className="relative cursor-pointer group"
           onClick={toggleNotifications}
         >
-          <RingIcon 
+          <RingIcon
             className="mr-3 group-hover:text-indigo-600 group-hover:scale-110 transition-transform duration-300 ease-in-out"
           />
           <div className="absolute bottom-0 right-0 bg-indigo-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">

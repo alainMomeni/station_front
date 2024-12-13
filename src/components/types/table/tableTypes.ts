@@ -1,7 +1,5 @@
 // src/components/types/table/tableTypes.ts
 
-import { ReactNode } from 'react';
-
 export interface Column {
   header: string;
   key: string;
@@ -34,11 +32,6 @@ export interface TableDataProps {
   data: TableRow[];
   onRowSelect: (row: TableRow) => void;
   selectedRows: TableRow[];
-}
-
-export interface TableButtonsProps {
-  buttons: (Button & { icon: ReactNode })[];
-  handleButtonClick: (buttonText: string) => void;
 }
 
 export interface StatusFilterProps {

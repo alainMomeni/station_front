@@ -171,7 +171,7 @@ export const sidebarConfig: SidebarConfig = {
           title: "Paramètres des produits",
           subItems: [
             { title: "Catégories de Produits", to: "/parametres" },
-            { title: "Paramètres de Prix", to: "/utilisateurs" },
+            { title: "Paramètres de Prix", to: "/fiche-de-prix" },
             { title: "Stock Minimun", to: "/utilisateurs" }
           ]
         },

@@ -13,6 +13,9 @@ export default {
         customTableText: '#B5B7C0',
         customLogoSearch: '#7E7E7E'
       },
+      height: {
+        '39rem': '39rem',
+      },
     },
   },
   plugins: [],

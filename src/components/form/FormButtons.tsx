@@ -3,8 +3,7 @@ import SaveIcon from '@/assets/svg/saveIcon';
 import CancelIcon from '@/assets/svg/cancelIcon';
 import { ButtonConfig } from '@components/types/form/formTypes';
 
-// Mappage des icônes avec les boutons
-const iconComponents = {
+const iconComponents: Record<'Enregistrer' | 'Annuler', React.ComponentType<any>> = {
   Enregistrer: SaveIcon,
   Annuler: CancelIcon,
 };
@@ -19,8 +18,7 @@ const FormButtons: React.FC<FormButtonsProps> = ({ buttons, handleButtonClick, r
   <div className="bg-white rounded-xl shadow-md p-2 mb-6 overflow-x-auto">
     <div className="flex pr-2 pl-2 sm:pr-4 space-x-4 min-w-max flex-wrap">
       {buttons.map((button, index) => {
-        const Icon = iconComponents[button.text];  // Sélectionner l'icône appropriée
-
+        const Icon = iconComponents[button.text]; // Pas besoin de cast si ButtonConfig est correctement typé
         return (
           <button
             key={index}

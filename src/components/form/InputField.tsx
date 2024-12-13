@@ -1,26 +1,32 @@
 import React from 'react';
-import { InputFieldProps } from '@components/types/form/formTypes';
+import { FormInput } from '@components/types/form/formTypes';
 
-const InputField: React.FC<InputFieldProps> = ({ input, readOnly }) => {
-  const isReadOnly = readOnly || input.readOnly;
+interface InputFieldProps {
+  input: FormInput;
+  readOnly?: boolean;
+  onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+}
 
-  const baseClasses = "w-full px-3 py-2 border rounded-lg text-sm sm:text-base transition duration-300";
-  const activeClasses = "focus:outline-none focus:border-customIndigoHover focus:ring-1 focus:ring-customIndigoHover";
-  const readOnlyClasses = "bg-gray-100 text-gray-700 border-gray-300 cursor-not-allowed";
-
-  const inputClasses = `${baseClasses} ${isReadOnly ? readOnlyClasses : activeClasses}`;
+const InputField: React.FC<InputFieldProps> = ({ input, readOnly, onChange }) => {
+  const { type, name, label, value, options } = input;
 
   return (
     <div className="flex flex-col">
-      <label className="block text-sm font-medium text-gray-700 mb-1 whitespace-nowrap">
-        {input.label}
+      <label htmlFor={name} className="text-sm font-medium text-gray-700">
+        {label}
       </label>
-      {input.type === "select" ? (
+      {type === 'select' && options ? (
         <select
-          className={inputClasses}
-          disabled={isReadOnly}
+          id={name}
+          name={name}
+          value={value as string} // Typecast en string car les options sont toujours des chaînes
+          onChange={onChange}
+          disabled={readOnly}
+          className={`mt-1 block w-full rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm ${
+            readOnly ? 'bg-gray-100 cursor-not-allowed' : ''
+          }`}
         >
-          {input.options?.map((option, index) => (
+          {options.map((option, index) => (
             <option key={index} value={option}>
               {option}
             </option>
@@ -28,14 +34,16 @@ const InputField: React.FC<InputFieldProps> = ({ input, readOnly }) => {
         </select>
       ) : (
         <input
-          type={input.type}
-          className={inputClasses}
-          readOnly={isReadOnly}
-          style={isReadOnly ? { WebkitTextFillColor: '#374151', opacity: 1 } : {}}
+          id={name}
+          name={name}
+          type={type}
+          value={value}
+          onChange={onChange}
+          readOnly={readOnly}
+          className={`mt-1 block w-full rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm ${
+            readOnly ? 'bg-gray-100 cursor-not-allowed' : ''
+          }`}
         />
-      )}
-      {isReadOnly && (
-        <div className="mt-1 text-xs text-gray-500 italic">Lecture seule</div>
       )}
     </div>
   );
